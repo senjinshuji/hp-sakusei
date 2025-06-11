@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Host
+Host: https://senjin-holdings.com
+
+# Sitemaps
+Sitemap: https://senjin-holdings.com/sitemap.xml

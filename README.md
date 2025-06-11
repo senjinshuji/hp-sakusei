@@ -1,36 +1,178 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Senjin Holdings - Corporate Website
 
-## Getting Started
+Senjin Holdings公式ウェブサイト。革新的なソリューションで未来を創造する投資会社のコーポレートサイトです。
 
-First, run the development server:
+## 🌟 プロジェクト概要
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Senjin Holdingsは、テクノロジーとイノベーションを通じて持続可能な成長を支援する投資会社です。このウェブサイトは、企業の理念、事業内容、およびお問い合わせ機能を提供しています。
+
+## 🚀 技術スタック
+
+- **フレームワーク**: Next.js 15.3.3 (App Router)
+- **言語**: TypeScript
+- **スタイリング**: Tailwind CSS
+- **フォント**: Geist Sans & Geist Mono
+- **ビルドツール**: Turbopack
+- **デプロイ**: Vercel
+
+## 📁 プロジェクト構成
+
+```
+senjin-holdings-copy/
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx         # ルートレイアウト・SEO設定
+│   │   ├── page.tsx           # メインページ
+│   │   └── globals.css        # グローバルスタイル
+│   └── components/
+│       ├── Header.tsx         # ヘッダーナビゲーション
+│       ├── HeroSection.tsx    # ヒーローセクション
+│       ├── BusinessSection.tsx # 事業紹介セクション
+│       ├── AboutSection.tsx   # 会社概要セクション
+│       ├── ContactSection.tsx # お問い合わせセクション
+│       └── Footer.tsx         # フッター
+├── public/
+│   ├── robots.txt            # 検索エンジン向けロボット設定
+│   └── sitemap.xml           # サイトマップ
+└── package.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 主な機能
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### レスポンシブデザイン
+- モバイル・タブレット・デスクトップに完全対応
+- Tailwind CSSによる効率的なスタイリング
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### SEO最適化
+- メタデータの完全設定
+- Open Graph & Twitter Cards対応
+- 構造化データマークアップ
+- robots.txt & sitemap.xml設置
 
-## Learn More
+### お問い合わせ機能
+- バリデーション付きフォーム
+- 連絡先情報の詳細表示
+- アクセス情報
 
-To learn more about Next.js, take a look at the following resources:
+### ユーザーエクスペリエンス
+- スムーズなアニメーション
+- インタラクティブな要素
+- 直感的なナビゲーション
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ 開発環境のセットアップ
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 前提条件
+- Node.js 18.17以上
+- npm、yarn、pnpm、またはbun
 
-## Deploy on Vercel
+### インストール
+```bash
+# 依存関係のインストール
+npm install
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# 開発サーバーの起動
+npm run dev
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# ブラウザで確認
+# http://localhost:3000
+```
+
+### ビルド・デプロイ
+```bash
+# プロダクションビルド
+npm run build
+
+# ローカルでプロダクション確認
+npm start
+
+# リント検査
+npm run lint
+```
+
+## 📱 レスポンシブブレークポイント
+
+- **Mobile**: < 768px
+- **Tablet**: 768px - 1024px  
+- **Desktop**: > 1024px
+
+## 🔍 SEO設定
+
+### メタデータ
+- タイトル: "Senjin Holdings - Building the Future Together"
+- 説明文: 投資会社としての専門性を表現
+- キーワード: investment, innovation, sustainable growth等
+
+### Open Graph
+- 1200x630pxの画像対応
+- Twitter Cards対応
+- 多言語対応準備
+
+## 📊 パフォーマンス
+
+- **静的生成**: 全ページ静的プリレンダリング
+- **画像最適化**: Next.js Image最適化
+- **フォント最適化**: next/font使用
+- **バンドルサイズ**: 最適化済み
+
+## 🚀 デプロイ
+
+### Vercel (推奨)
+```bash
+# Vercel CLIでデプロイ
+npx vercel
+
+# または Git連携で自動デプロイ
+```
+
+### その他のプラットフォーム
+- Netlify
+- AWS Amplify
+- Docker対応
+
+## 🔧 開発・カスタマイズガイド
+
+### コンポーネントの追加
+```typescript
+// src/components/NewComponent.tsx
+export default function NewComponent() {
+  return (
+    <section className="py-16">
+      {/* コンテンツ */}
+    </section>
+  );
+}
+```
+
+### スタイルのカスタマイズ
+- `tailwind.config.ts`でテーマ設定
+- `src/app/globals.css`でグローバルスタイル
+
+### SEO設定の変更
+- `src/app/layout.tsx`のmetadata
+
+## 📈 今後の機能拡張予定
+
+- [ ] 多言語対応(i18n)
+- [ ] ブログ機能
+- [ ] 投資実績ページ
+- [ ] チームページ詳細
+- [ ] お問い合わせフォーム送信機能
+- [ ] 管理画面
+
+## 🤝 コントリビューション
+
+プルリクエストやイシュー報告を歓迎します。
+
+## 📄 ライセンス
+
+© 2025 Senjin Holdings. All rights reserved.
+
+## 📞 サポート
+
+技術的な質問や要望については、開発チームまでお問い合わせください。
+
+---
+
+**最終更新**: 2025年6月11日
+**バージョン**: 1.0.0
+**開発者**: Worker3 (QA & Documentation Team)

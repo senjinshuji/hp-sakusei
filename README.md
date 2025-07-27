@@ -63,6 +63,7 @@ npx http-server -p 8000
 
 ## デプロイについて
 静的サイトホスティングサービス（Netlify、Vercel、GitHub Pages等）にデプロイ可能です。
+Vercel: https://hp-sakusei.vercel.app
 
 ## カラーパレット
 - Primary: #45EEFF (シアンブルー)

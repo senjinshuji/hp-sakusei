@@ -1,0 +1,312 @@
+/* Recruit Page Styles */
+
+/* Recruit Hero */
+.recruit-hero {
+    background: linear-gradient(135deg, #ff6b6b 0%, var(--primary-color) 100%);
+}
+
+/* Recruit Message */
+.recruit-message {
+    padding: var(--spacing-3xl) 0;
+    text-align: center;
+}
+
+.message-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.message-content p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    margin-bottom: var(--spacing-md);
+}
+
+/* Culture & Values */
+.culture-values {
+    padding: var(--spacing-3xl) 0;
+    background: var(--bg-light);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+}
+
+.value-card {
+    background: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.value-card h3 {
+    font-size: 1.75rem;
+    margin-bottom: var(--spacing-lg);
+    color: var(--text-dark);
+}
+
+.value-card ul {
+    list-style: none;
+}
+
+.value-card li {
+    padding-left: var(--spacing-lg);
+    position: relative;
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.6;
+    color: var(--text-light);
+}
+
+.value-card li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: var(--font-weight-bold);
+}
+
+.emphasis {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-md);
+}
+
+/* Work Environment */
+.work-environment {
+    padding: var(--spacing-3xl) 0;
+}
+
+.environment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.environment-item {
+    text-align: center;
+    padding: var(--spacing-xl);
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    transition: all var(--transition-normal);
+}
+
+.environment-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-color);
+}
+
+.environment-item .icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+    display: inline-block;
+}
+
+.environment-item h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-dark);
+}
+
+.environment-item p {
+    color: var(--text-light);
+}
+
+/* Positions */
+.positions {
+    padding: var(--spacing-3xl) 0;
+    background: var(--bg-light);
+}
+
+.positions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+}
+
+.position-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: all var(--transition-normal);
+}
+
+.position-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.position-icon {
+    font-size: 4rem;
+    padding: var(--spacing-xl) var(--spacing-xl) 0;
+    display: block;
+}
+
+.position-card h3 {
+    font-size: 1.75rem;
+    padding: 0 var(--spacing-xl);
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-dark);
+}
+
+.position-tagline {
+    padding: 0 var(--spacing-xl);
+    color: var(--primary-color);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: var(--spacing-lg);
+}
+
+.position-details {
+    padding: var(--spacing-lg) var(--spacing-xl) var(--spacing-xl);
+    background: var(--bg-light);
+}
+
+.position-details h4 {
+    font-size: 1.125rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-dark);
+}
+
+.position-details ul {
+    list-style: none;
+    margin-bottom: var(--spacing-lg);
+}
+
+.position-details li {
+    padding-left: var(--spacing-md);
+    position: relative;
+    margin-bottom: var(--spacing-xs);
+    font-size: 0.95rem;
+    color: var(--text-light);
+}
+
+.position-details li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+.view-more {
+    text-align: center;
+    margin-top: var(--spacing-xl);
+}
+
+/* Future Outlook */
+.future-outlook {
+    padding: var(--spacing-3xl) 0;
+}
+
+.outlook-content {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: var(--spacing-xl);
+}
+
+.outlook-item {
+    background: var(--bg-light);
+    padding: var(--spacing-xl);
+    border-radius: 12px;
+    margin-bottom: var(--spacing-xl);
+}
+
+.outlook-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-dark);
+}
+
+.outlook-item .year {
+    font-size: 1.125rem;
+    color: var(--primary-color);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: var(--spacing-md);
+}
+
+.outlook-item ul {
+    list-style: none;
+}
+
+.outlook-item li {
+    padding-left: var(--spacing-lg);
+    position: relative;
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.6;
+    color: var(--text-light);
+}
+
+.outlook-item li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+.outlook-message {
+    text-align: center;
+    font-size: 1.125rem;
+    color: var(--primary-color);
+    font-weight: var(--font-weight-bold);
+    padding: var(--spacing-lg);
+    background: var(--white);
+    border-radius: 8px;
+    border: 2px solid var(--primary-color);
+}
+
+/* Entry Section */
+.entry-section {
+    background: linear-gradient(135deg, var(--bg-dark) 0%, rgba(69, 238, 255, 0.1) 100%);
+    color: var(--white);
+    padding: var(--spacing-3xl) 0;
+    text-align: center;
+}
+
+.entry-content p {
+    font-size: 1.125rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--gray-200);
+}
+
+.entry-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    margin-top: var(--spacing-xl);
+}
+
+.entry-buttons .btn {
+    min-width: 200px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .environment-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .positions-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .entry-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .entry-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}

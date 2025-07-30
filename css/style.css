@@ -421,7 +421,7 @@ p {
 }
 
 .breadcrumb li::after {
-    content: '/';
+    content: '>';
     margin: 0 var(--spacing-xs);
     color: var(--gray-400);
 }

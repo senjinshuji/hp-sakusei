@@ -87,7 +87,7 @@
 /* About Teaser Section */
 .about-teaser {
     padding: var(--spacing-3xl) 0;
-    background: var(--bg-light);
+    background: var(--gray-100);
 }
 
 .about-content {
@@ -137,8 +137,8 @@
 }
 
 .service-card {
-    background: var(--white);
-    border: 1px solid var(--gray-200);
+    background: var(--gray-100);
+    border: 1px solid var(--gray-300);
     border-radius: 12px;
     padding: var(--spacing-xl);
     text-align: center;
@@ -162,8 +162,9 @@
 
 .service-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(69, 238, 255, 0.2);
     border-color: var(--primary-color);
+    background: var(--gray-200);
 }
 
 .service-card:hover::before {
@@ -201,13 +202,15 @@
 /* Office Tour CTA Section */
 .office-tour-cta {
     background: linear-gradient(135deg, 
-        var(--bg-dark) 0%, 
-        rgba(69, 238, 255, 0.1) 100%);
-    color: var(--white);
+        var(--black) 0%, 
+        rgba(69, 238, 255, 0.05) 100%);
+    color: var(--text-dark);
     padding: var(--spacing-3xl) 0;
     text-align: center;
     position: relative;
     overflow: hidden;
+    border-top: 1px solid var(--gray-200);
+    border-bottom: 1px solid var(--gray-200);
 }
 
 .office-tour-cta::before {
@@ -271,7 +274,7 @@
 /* Latest News Section */
 .latest-news {
     padding: var(--spacing-3xl) 0;
-    background: var(--bg-light);
+    background: var(--black);
 }
 
 .latest-news .section-header {
@@ -293,18 +296,19 @@
 }
 
 .news-item {
-    background: var(--white);
+    background: var(--gray-100);
     padding: var(--spacing-lg);
     border-radius: 8px;
     display: flex;
     align-items: center;
     gap: var(--spacing-lg);
     transition: all var(--transition-normal);
-    border: 1px solid transparent;
+    border: 1px solid var(--gray-200);
 }
 
 .news-item:hover {
     border-color: var(--primary-color);
+    background: var(--gray-200);
     transform: translateX(5px);
 }
 
@@ -328,6 +332,7 @@
 /* Recruit Teaser Section */
 .recruit-teaser {
     padding: var(--spacing-3xl) 0;
+    background: var(--black);
 }
 
 .recruit-positions {
@@ -338,14 +343,15 @@
 }
 
 .position-card {
-    background: var(--bg-dark);
-    color: var(--white);
+    background: var(--gray-100);
+    color: var(--text-dark);
     padding: var(--spacing-xl);
     border-radius: 12px;
     text-align: center;
     transition: all var(--transition-normal);
     position: relative;
     overflow: hidden;
+    border: 1px solid var(--gray-200);
 }
 
 .position-card::after {
@@ -364,6 +370,8 @@
 
 .position-card:hover {
     transform: translateY(-5px);
+    background: var(--gray-200);
+    border-color: var(--primary-color);
 }
 
 .position-card:hover::after {

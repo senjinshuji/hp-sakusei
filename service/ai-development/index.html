@@ -49,14 +49,15 @@
             line-height: 1.8;
         }
         .saas-product {
-            background: #f8f9fa;
+            background: var(--gray-100);
             border-left: 4px solid var(--primary-color);
             padding: 25px;
             margin-bottom: 25px;
             border-radius: 8px;
+            border: 1px solid var(--gray-200);
         }
         .saas-product h3 {
-            color: var(--text-dark);
+            color: var(--primary-color);
             margin-bottom: 15px;
             font-size: 1.3rem;
         }
@@ -85,17 +86,20 @@
             color: var(--text-dark);
         }
         .solution-box {
-            background: white;
+            background: var(--gray-100);
             border-radius: 12px;
             padding: 40px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 15px rgba(69, 238, 255, 0.1);
             margin-bottom: 30px;
-            border: 1px solid #e5e7eb;
+            border: 1px solid var(--gray-200);
         }
         .solution-box h3 {
             color: var(--primary-color);
             font-size: 1.8rem;
             margin-bottom: 20px;
+        }
+        .solution-box p {
+            color: var(--text-light);
         }
         .closing-section {
             background: linear-gradient(135deg, var(--black) 0%, var(--gray-100) 100%);

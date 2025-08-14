@@ -417,7 +417,8 @@ p {
     font-size: clamp(2rem, 4vw, 3rem);
     margin-bottom: var(--spacing-sm);
     position: relative;
-    display: inline-block;
+    text-align: center;
+    display: block;
 }
 
 .section-title::after {

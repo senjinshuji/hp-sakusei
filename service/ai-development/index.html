@@ -17,13 +17,14 @@
     <style>
         /* カスタムスタイル */
         .tech-advantage {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: linear-gradient(135deg, var(--gray-200) 0%, var(--gray-100) 100%);
+            color: var(--text-dark);
             padding: 60px 0;
             margin: 60px 0;
+            border: 1px solid var(--primary-color);
         }
         .tech-advantage h2 {
-            color: white;
+            color: var(--primary-color);
         }
         .advantage-grid {
             display: grid;
@@ -32,19 +33,19 @@
             margin-top: 40px;
         }
         .advantage-card {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(0, 0, 0, 0.5);
             backdrop-filter: blur(10px);
             border-radius: 12px;
             padding: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid var(--gray-300);
         }
         .advantage-card h3 {
-            color: white;
+            color: var(--primary-color);
             font-size: 1.5rem;
             margin-bottom: 15px;
         }
         .advantage-card p {
-            color: rgba(255, 255, 255, 0.9);
+            color: var(--text-light);
             line-height: 1.8;
         }
         .saas-product {
@@ -65,9 +66,11 @@
             margin-bottom: 10px;
         }
         .uniqueness-section {
-            background: #f0f9ff;
+            background: var(--gray-100);
             padding: 60px 0;
             margin: 40px 0;
+            border-top: 1px solid var(--gray-200);
+            border-bottom: 1px solid var(--gray-200);
         }
         .ai-solution-section {
             padding: 60px 0;
@@ -95,32 +98,35 @@
             margin-bottom: 20px;
         }
         .closing-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: linear-gradient(135deg, var(--black) 0%, var(--gray-100) 100%);
+            color: var(--text-dark);
             padding: 80px 0;
             text-align: center;
+            border-top: 2px solid var(--primary-color);
         }
         .closing-section h2 {
-            color: white;
+            color: var(--primary-color);
             font-size: 2.5rem;
             margin-bottom: 30px;
         }
         .closing-section p {
-            color: white;
+            color: var(--text-light);
             font-size: 1.2rem;
             line-height: 1.8;
             max-width: 800px;
             margin: 0 auto 30px;
         }
         .closing-section .btn {
-            background: white;
-            color: #667eea;
+            background: var(--primary-color);
+            color: var(--black);
             font-weight: bold;
             padding: 15px 40px;
             font-size: 1.1rem;
         }
         .closing-section .btn:hover {
-            background: #f0f0f0;
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(69, 238, 255, 0.4);
         }
     </style>
 </head>
@@ -238,7 +244,7 @@
     <!-- 技術的優位性 -->
     <section class="tech-advantage">
         <div class="container">
-            <h2 class="section-title" style="text-align: center; color: white;">技術的優位性</h2>
+            <h2 class="section-title" style="text-align: center;">技術的優位性</h2>
             <div class="advantage-grid">
                 <div class="advantage-card">
                     <h3>🏗️ 現場実証済みのAI開発力</h3>

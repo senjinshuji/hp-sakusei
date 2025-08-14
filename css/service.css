@@ -39,7 +39,7 @@
 }
 
 .service-main-card {
-    background: var(--white);
+    background: var(--gray-100);
     border: 2px solid var(--gray-200);
     border-radius: 16px;
     overflow: hidden;
@@ -152,8 +152,8 @@
 
 /* Service CTA Section */
 .service-cta {
-    background: linear-gradient(135deg, var(--bg-dark) 0%, rgba(69, 238, 255, 0.1) 100%);
-    color: var(--white);
+    background: linear-gradient(135deg, var(--black) 0%, rgba(69, 238, 255, 0.05) 100%);
+    color: var(--text-dark);
     padding: var(--spacing-3xl) 0;
     text-align: center;
 }
@@ -171,9 +171,9 @@
 
 /* Service Detail Page Styles */
 .service-hero {
-    background: linear-gradient(135deg, var(--bg-dark) 0%, var(--primary-color) 100%);
+    background: linear-gradient(135deg, var(--black) 0%, rgba(69, 238, 255, 0.1) 100%);
     padding: calc(80px + var(--spacing-3xl)) 0 var(--spacing-3xl);
-    color: var(--white);
+    color: var(--text-dark);
     position: relative;
     overflow: hidden;
 }
@@ -244,7 +244,7 @@
 }
 
 .lineup-item {
-    background: var(--white);
+    background: var(--gray-100);
     border: 1px solid var(--gray-200);
     border-radius: 12px;
     padding: var(--spacing-xl);
@@ -305,7 +305,7 @@
 }
 
 .result-card {
-    background: var(--white);
+    background: var(--gray-100);
     padding: var(--spacing-xl);
     border-radius: 12px;
     text-align: center;

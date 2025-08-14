@@ -2,10 +2,10 @@
 
 /* Page Hero */
 .page-hero {
-    background: linear-gradient(135deg, var(--bg-dark) 0%, var(--primary-color) 100%);
+    background: linear-gradient(135deg, var(--black) 0%, rgba(69, 238, 255, 0.1) 100%);
     padding: calc(80px + var(--spacing-3xl)) 0 var(--spacing-3xl);
     text-align: center;
-    color: var(--white);
+    color: var(--text-dark);
     position: relative;
     overflow: hidden;
 }
@@ -312,7 +312,7 @@
     height: 16px;
     background: var(--primary-color);
     border-radius: 50%;
-    border: 3px solid var(--white);
+    border: 3px solid var(--black);
     box-shadow: 0 0 0 2px var(--primary-color);
 }
 

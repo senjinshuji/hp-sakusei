@@ -3,17 +3,285 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI×MARKETING | 獲得特化のAIグロース｜Senjin Holdings</title>
-    <meta name="description" content="獲得に特化したAIネイティブなマーケティングで、企業成長を加速。完全成果報酬型で月間45億円市場での実績。">
+    <title>AI MARKETING | 獲得特化のAIグロース｜Senjin Holdings</title>
+    <meta name="description" content="マーケティングの未来はAI×インハウス。獲得に特化したAIネイティブなマーケティングで、企業成長を加速。">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
     
     <!-- CSS -->
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/service.css">
+    <style>
+        /* クライアントロゴスクロール */
+        .client-logos-section {
+            padding: 60px 0;
+            background: #f8f9fa;
+            overflow: hidden;
+        }
+        .client-logos-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        .client-logos-track {
+            display: flex;
+            animation: scroll-logos 30s linear infinite;
+        }
+        .client-logo {
+            flex: 0 0 auto;
+            width: 200px;
+            height: 100px;
+            margin: 0 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .client-logo img {
+            max-width: 160px;
+            max-height: 60px;
+            object-fit: contain;
+        }
+        @keyframes scroll-logos {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* ソリューション比較図のスタイル */
+        .solutions-comparison {
+            padding: 80px 0;
+            background: #f0f9ff;
+        }
+        .solution-box {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            height: 100%;
+        }
+        .solution-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 24px;
+        }
+        .icon-yellow {
+            background: #fef3c7;
+            color: #f59e0b;
+        }
+        .icon-blue {
+            background: #dbeafe;
+            color: #3b82f6;
+        }
+        .allocation-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .allocation-box {
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 12px;
+        }
+        .process-step-yellow {
+            background: #fef3c7;
+            color: #92400e;
+        }
+        .process-step-blue {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .bridge-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+        }
+        .arrow-icon {
+            font-size: 32px;
+            color: #6b7280;
+            margin-bottom: 10px;
+        }
+        .bridge-text {
+            text-align: center;
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        /* 構造比較図のスタイル */
+        .structure-comparison {
+            padding: 80px 0;
+            background: white;
+        }
+        .structure-box {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border: 2px solid #e5e7eb;
+        }
+        .structure-box.traditional {
+            border-color: #9ca3af;
+        }
+        .structure-box.senjin {
+            border-color: #3b82f6;
+        }
+        .structure-box.senjin-ai {
+            border-color: #f97316;
+            background: #fff7ed;
+        }
+        .process-title {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .arrow-down {
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid #9ca3af;
+            margin: 10px auto;
+        }
+        .arrow-down-blue {
+            border-top-color: #3b82f6;
+        }
+        .arrow-down-orange {
+            border-top-color: #f97316;
+        }
+
+        /* 階層構造図のスタイル */
+        .hierarchy-container {
+            padding: 60px 0;
+            background: #f8fafc;
+        }
+        .hierarchy-box {
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            padding: 8px;
+            text-align: center;
+            position: relative;
+            margin: 0 auto;
+            z-index: 200;
+        }
+        .strategy-box {
+            background-color: #dbeafe;
+            border: 2px solid #3b82f6;
+            width: 220px;
+        }
+        .type-box {
+            background-color: #bfdbfe;
+            border: 2px solid #60a5fa;
+            width: 160px;
+        }
+        .channel-box {
+            background-color: #93c5fd;
+            border: 2px solid #3b82f6;
+            width: 140px;
+        }
+        .saas-box {
+            background-color: #eff6ff;
+            border: 2px solid #2563eb;
+            width: 110px;
+        }
+        .execution-box {
+            background-color: #f0f9ff;
+            border: 2px solid #7dd3fc;
+            width: 110px;
+        }
+        .icon-circle {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: #3b82f6;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            margin: 0 auto 3px auto;
+        }
+        .service-overlay {
+            position: absolute;
+            border-radius: 10px;
+            border-width: 3px;
+            border-style: dashed;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .service-label {
+            position: absolute;
+            font-weight: bold;
+            border-radius: 20px;
+            padding: 4px 8px;
+            font-size: 0.7rem;
+            white-space: nowrap;
+            z-index: 200;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .first-service {
+            border-color: rgba(37, 99, 235, 0.8);
+            background-color: rgba(219, 234, 254, 0.1);
+        }
+        .first-label {
+            background-color: rgba(37, 99, 235, 0.9);
+            color: white;
+        }
+        .second-service {
+            border-color: rgba(16, 185, 129, 0.8);
+            background-color: rgba(209, 250, 229, 0.1);
+        }
+        .second-label {
+            background-color: rgba(16, 185, 129, 0.9);
+            color: white;
+        }
+        .third-service {
+            border-color: rgba(244, 63, 94, 0.8);
+            background-color: rgba(254, 205, 211, 0.1);
+        }
+        .third-label {
+            background-color: rgba(244, 63, 94, 0.9);
+            color: white;
+        }
+        .fourth-service {
+            border-color: rgba(139, 92, 246, 0.8);
+            background-color: rgba(237, 233, 254, 0.1);
+        }
+        .fourth-label {
+            background-color: rgba(139, 92, 246, 0.9);
+            color: white;
+        }
+        .fifth-service {
+            border-color: rgba(245, 158, 11, 0.8);
+            background-color: rgba(254, 243, 199, 0.1);
+        }
+        .fifth-label {
+            background-color: rgba(245, 158, 11, 0.9);
+            color: white;
+        }
+        .branch-column {
+            width: 400px;
+        }
+        .service-outline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -86,8 +354,8 @@
         <div class="container">
             <div class="service-hero-content">
                 <div class="service-icon-large">🎯</div>
-                <h1>AI×MARKETING</h1>
-                <p class="service-tagline">獲得特化のAIグロース</p>
+                <h1>AI MARKETING | 獲得特化のAIグロース</h1>
+                <p class="service-tagline">マーケティングの未来はAI×インハウス</p>
             </div>
         </div>
     </section>
@@ -103,103 +371,518 @@
         </div>
     </nav>
 
-    <!-- Value Proposition -->
+    <!-- サポート実績 -->
+    <section class="client-logos-section">
+        <div class="container">
+            <h2 class="section-title">サポート実績</h2>
+            <div class="client-logos-container">
+                <div class="client-logos-track">
+                    <!-- ロゴを2セット配置して無限スクロール -->
+                    <div class="client-logo">
+                        <img src="https://page.gensparksite.com/v1/base64_upload/6df5bd0dc91b6d132b5024f1f6e6f0c5" alt="クライアント1">
+                    </div>
+                    <div class="client-logo">
+                        <img src="https://page.gensparksite.com/v1/base64_upload/b832a126cdb6a82d36adbea0bf45da0e" alt="クライアント2">
+                    </div>
+                    <div class="client-logo">
+                        <img src="https://page.gensparksite.com/v1/base64_upload/a81da64c8c4716416e9c3c29030ea091" alt="クライアント3">
+                    </div>
+                    <div class="client-logo">
+                        <img src="https://page.gensparksite.com/slides_images/d90fdfd013e16a0a7cf20e272da4a073.png" alt="クライアント4">
+                    </div>
+                    <div class="client-logo">
+                        <img src="https://page.gensparksite.com/slides_images/a030c335f2e376949f3a75f3441cd30d.jpg" alt="クライアント5">
+                    </div>
+                    <div class="client-logo">
+                        <img src="https://page.gensparksite.com/get_upload_url/82f929d4d15a924a3aaebb4e0295253e7b840ec7bb2c3e663b48b9d8ae730b09/default/ff3e314f-1e3b-45be-aeb0-de9051509213" alt="クライアント6">
+                    </div>
+                    <div class="client-logo">
+                        <img src="https://page.gensparksite.com/slides_images/c4f84af9306a61fd2c9c2020d4ad0fbf.jpg" alt="クライアント7">
+                    </div>
+                    <div class="client-logo">
+                        <img src="https://page.gensparksite.com/slides_images/34e73d09c62679e0a17d35176a72cd23.png" alt="クライアント8">
+                    </div>
+                    <!-- 同じロゴを繰り返して無限スクロール効果 -->
+                    <div class="client-logo">
+                        <img src="https://page.gensparksite.com/v1/base64_upload/6df5bd0dc91b6d132b5024f1f6e6f0c5" alt="クライアント1">
+                    </div>
+                    <div class="client-logo">
+                        <img src="https://page.gensparksite.com/v1/base64_upload/b832a126cdb6a82d36adbea0bf45da0e" alt="クライアント2">
+                    </div>
+                    <div class="client-logo">
+                        <img src="https://page.gensparksite.com/v1/base64_upload/a81da64c8c4716416e9c3c29030ea091" alt="クライアント3">
+                    </div>
+                    <div class="client-logo">
+                        <img src="https://page.gensparksite.com/slides_images/d90fdfd013e16a0a7cf20e272da4a073.png" alt="クライアント4">
+                    </div>
+                    <div class="client-logo">
+                        <img src="https://page.gensparksite.com/slides_images/a030c335f2e376949f3a75f3441cd30d.jpg" alt="クライアント5">
+                    </div>
+                    <div class="client-logo">
+                        <img src="https://page.gensparksite.com/get_upload_url/82f929d4d15a924a3aaebb4e0295253e7b840ec7bb2c3e663b48b9d8ae730b09/default/ff3e314f-1e3b-45be-aeb0-de9051509213" alt="クライアント6">
+                    </div>
+                    <div class="client-logo">
+                        <img src="https://page.gensparksite.com/slides_images/c4f84af9306a61fd2c9c2020d4ad0fbf.jpg" alt="クライアント7">
+                    </div>
+                    <div class="client-logo">
+                        <img src="https://page.gensparksite.com/slides_images/34e73d09c62679e0a17d35176a72cd23.png" alt="クライアント8">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 市場環境の変化 -->
     <section class="value-proposition">
         <div class="container">
+            <h2 class="section-title">市場環境の変化</h2>
             <div class="value-content">
-                <h2>マーケティングの未来は、「AI × インハウス」</h2>
-                <p>クリエイティブから戦略立案まで、AIが生み出す品質は人間を凌駕し始め、業務の80%が代替される未来が必ず来ます。</p>
-                <p>これにより、特定のスタープレイヤーに頼る必要はなくなり、マーケティングはより「開かれた業務」へと変わります。</p>
-                <p>この変化がもたらす最大の潮流、それが「インハウス化」です。</p>
-                <p>これからの競争は、社内情報に最適化された「自社のAI」と、代理店の知見を持つ「外部のAI」との戦いになります。</p>
-                <p>この未来を見据え、今すぐ取り組むべきことは何か。貴社のビジネスを成功に導くための戦略的判断を、私たちがお手伝いします。</p>
+                <h3>AIがもたらす「マーケティングの民主化」と、加速する「インハウス化」の潮流</h3>
+                <p>これまで、専門的なマーケティングの知識や経験は広告代理店に属人化し、一方で、最も重要な顧客データはクライアント企業が持つ、という「分断」が当たり前でした。</p>
+                <p>しかし、AIの急激な進化がその構造を根底から覆しています。</p>
+                <p>かつて代理店だけが持っていた高度なノウハウはAIによって誰もが扱えるようになり、企業は自社に眠る顧客データをAIで活用することで、自ら最適なマーケティング戦略を描き、実行できる時代になりました。</p>
+                <p>この大きな潮流により、多くの先進的な企業が外部依存から脱却し、マーケティング機能を自社に持つ「インハウス化」を加速させています。</p>
+                <p><strong>Senjin Holdingsは、この変革期において貴社の状況に合わせた最適なアプローチをご提案します。</strong></p>
             </div>
         </div>
     </section>
 
-    <!-- Service Lineup -->
+    <!-- 2つのソリューション -->
+    <section class="solutions-comparison">
+        <div class="container">
+            <h2 class="section-title">貴社に最適なソリューションをご提案</h2>
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 40px; margin-top: 40px;">
+                <!-- 継続的サポートソリューション（左側） -->
+                <div style="flex: 1;">
+                    <div class="solution-box">
+                        <div class="solution-icon icon-yellow">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 style="text-align: center; color: #92400e; margin-bottom: 10px;">必要部分の継続的サポート</h3>
+                        <p style="font-size: 14px; color: #92400e; margin-bottom: 20px; text-align: center;">
+                            専門性の高い領域をSenjinが継続的に支援し、コア業務へのリソース集中を実現
+                        </p>
+                        <div class="allocation-grid">
+                            <div class="allocation-box" style="background: white; color: #92400e; border: 1px solid #fef3c7;">
+                                <i class="fas fa-user-tie"></i> 戦略立案
+                                <div style="font-size: 10px; margin-top: 5px;">貴社中心</div>
+                            </div>
+                            <div class="allocation-box process-step-yellow">
+                                <i class="fas fa-chart-pie"></i> 分析・企画
+                                <div style="font-size: 10px; margin-top: 5px;">Senjin支援</div>
+                            </div>
+                            <div class="allocation-box" style="background: white; color: #92400e; border: 1px solid #fef3c7;">
+                                <i class="fas fa-laptop"></i> ディレクション
+                                <div style="font-size: 10px; margin-top: 5px;">貴社中心</div>
+                            </div>
+                            <div class="allocation-box process-step-yellow">
+                                <i class="fas fa-cogs"></i> 実行・運用
+                                <div style="font-size: 10px; margin-top: 5px;">Senjin支援</div>
+                            </div>
+                        </div>
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin-top: 20px;">
+                            <h4 style="font-weight: bold; color: #92400e; font-size: 14px; margin-bottom: 10px;">アプローチ</h4>
+                            <ul style="font-size: 12px; color: #92400e; padding-left: 20px;">
+                                <li>AI SaaS提供による業務効率化の実現</li>
+                                <li>専門性の高い領域を継続的にサポート</li>
+                                <li>リソース配分を柔軟に調整可能</li>
+                                <li>ビジネス状況に応じたスケーラビリティ</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 連携ブリッジ -->
+                <div class="bridge-container">
+                    <div class="arrow-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <div class="bridge-text">
+                        ニーズに合わせて<br>選択・移行可能
+                    </div>
+                </div>
+                
+                <!-- 完全インハウス化ソリューション（右側） -->
+                <div style="flex: 1;">
+                    <div class="solution-box">
+                        <div class="solution-icon icon-blue">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3 style="text-align: center; color: #1e40af; margin-bottom: 10px;">完全インハウス化への道</h3>
+                        <p style="font-size: 14px; color: #1e40af; margin-bottom: 20px; text-align: center;">
+                            自社内に専門性と技術を蓄積し、長期的な競争力を構築
+                        </p>
+                        <div class="allocation-grid">
+                            <div class="allocation-box process-step-blue">
+                                <i class="fas fa-robot"></i> AI技術導入
+                            </div>
+                            <div class="allocation-box process-step-blue">
+                                <i class="fas fa-graduation-cap"></i> 人材教育
+                            </div>
+                            <div class="allocation-box process-step-blue">
+                                <i class="fas fa-sync"></i> ナレッジ移管
+                            </div>
+                            <div class="allocation-box process-step-blue">
+                                <i class="fas fa-toolbox"></i> 体制構築
+                            </div>
+                        </div>
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin-top: 20px;">
+                            <h4 style="font-weight: bold; color: #1e40af; font-size: 14px; margin-bottom: 10px;">アプローチ</h4>
+                            <ol style="font-size: 12px; color: #1e40af; padding-left: 20px;">
+                                <li>初期段階でSenjinが全体運用を担当</li>
+                                <li>AI活用ノウハウ・技術を段階的に移転</li>
+                                <li>自社人材の育成と体制構築を並行</li>
+                                <li>完全内製化へスムーズに移行</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Senjin Holdingsが選ばれる理由 -->
+    <section class="value-proposition">
+        <div class="container">
+            <h2 class="section-title">Senjin Holdingsが選ばれる理由</h2>
+            <div class="value-content">
+                <h3>なぜ、私たちは成果を出し続けられるのか？</h3>
+                <p><strong>現場の「成功」だけを、AIで「資産」に変換。</strong></p>
+                <p>私たちの原点は常に「現場での実行」にあります。<br>
+                自ら実践し、膨大な試行錯誤の中から見つけ出した、本当に成果の出る「再現性のある成功パターン」。</p>
+                <p>私たちは、その"勝ち筋"だけをAIで効率化・自動化し、誰でも使えるように自社SaaSとして提供します。<br>
+                机上の空論ではない、現場が生んだ血の通ったソリューションだからこそ、クライアントの成長にダイレクトに接続できるのです。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 構造比較 -->
+    <section class="structure-comparison">
+        <div class="container">
+            <h2 class="section-title">実行構造の革新</h2>
+            <div style="display: flex; justify-content: center; gap: 80px; margin-top: 40px;">
+                <!-- 従来の構造 -->
+                <div style="width: 400px;">
+                    <div style="background: #e5e7eb; border-radius: 8px; padding: 15px; margin-bottom: 20px;">
+                        <h3 style="font-size: 20px; font-weight: bold; text-align: center; color: #4b5563;">従来の実行構造</h3>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="structure-box traditional">
+                            <div class="process-title" style="color: #374151;">ディレクター</div>
+                            <div style="text-align: center; font-size: 14px; color: #6b7280;">進行管理・意思決定</div>
+                        </div>
+                        <div class="arrow-down"></div>
+                        <div class="structure-box traditional">
+                            <div class="process-title" style="color: #374151;">マーケター</div>
+                            <div style="text-align: center; font-size: 14px; color: #6b7280;">運用・効果測定</div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 30px; padding: 20px; background: #f3f4f6; border-radius: 8px;">
+                        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                            <i class="fas fa-exclamation-triangle" style="color: #f59e0b; margin-right: 10px;"></i>
+                            <span style="font-weight: bold; color: #4b5563;">課題</span>
+                        </div>
+                        <ul style="font-size: 14px; color: #6b7280; padding-left: 25px;">
+                            <li>人的スキルに大きく依存</li>
+                            <li>経験と勘に基づく意思決定</li>
+                            <li>ナレッジの属人化・引継ぎ困難</li>
+                            <li>改善サイクルの遅延・属人化</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Senjinの構造 -->
+                <div style="width: 400px;">
+                    <div style="background: #3b82f6; border-radius: 8px; padding: 15px; margin-bottom: 20px;">
+                        <h3 style="font-size: 20px; font-weight: bold; text-align: center; color: white;">Senjinのアプローチ</h3>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="structure-box senjin">
+                            <div class="process-title" style="color: #1e40af;">ディレクター</div>
+                            <div style="text-align: center; font-size: 14px; color: #3b82f6;">統括管理・判断</div>
+                        </div>
+                        <div class="arrow-down arrow-down-blue"></div>
+                        <div class="structure-box senjin-ai">
+                            <div class="process-title" style="color: #ea580c;">AI SaaS</div>
+                            <div style="text-align: center; font-size: 14px; color: #f97316;">自動化・効率化</div>
+                        </div>
+                        <div class="arrow-down arrow-down-orange"></div>
+                        <div class="structure-box senjin">
+                            <div class="process-title" style="color: #1e40af;">マーケター</div>
+                            <div style="text-align: center; font-size: 14px; color: #3b82f6;">実行・分析</div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 30px; padding: 20px; background: #eff6ff; border-radius: 8px;">
+                        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                            <i class="fas fa-check-circle" style="color: #3b82f6; margin-right: 10px;"></i>
+                            <span style="font-weight: bold; color: #1e40af;">メリット</span>
+                        </div>
+                        <ul style="font-size: 14px; color: #1e40af; padding-left: 25px;">
+                            <li>AIによるデータ駆動の意思決定</li>
+                            <li>ナレッジの標準化・共有が容易</li>
+                            <li>効率化による工数削減・コスト最適化</li>
+                            <li>継続的な学習・改善サイクルの自動化</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 提供サービス -->
+    <section class="value-proposition">
+        <div class="container">
+            <h2 class="section-title">提供サービス</h2>
+            <div class="value-content">
+                <p>私たちのサービスは、単なるツールの提供ではありません。認知獲得から広告運用、そして最終的な完全インハウス化まで、貴社の事業フェーズや目的に合わせて最適な支援を組み合わせ、一気通貫でサポートするオペレーション一体型SaaSです。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- マーケティング階層構造図 -->
+    <section class="hierarchy-container">
+        <div class="container">
+            <h2 class="section-title">マーケティング階層構造</h2>
+            <p style="text-align: center; margin-bottom: 20px;">戦略から実働までの階層構造とサービス提供範囲</p>
+            
+            <!-- サービス提供範囲の説明 -->
+            <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 30px;">
+                <div style="display: flex; align-items: center;">
+                    <span style="display: inline-block; width: 12px; height: 12px; background: #2563eb; border-radius: 50%; margin-right: 5px;"></span>
+                    <span style="font-size: 12px;">第一想起取れるくん®</span>
+                </div>
+                <div style="display: flex; align-items: center;">
+                    <span style="display: inline-block; width: 12px; height: 12px; background: #10b981; border-radius: 50%; margin-right: 5px;"></span>
+                    <span style="font-size: 12px;">獲得取れるくん®</span>
+                </div>
+                <div style="display: flex; align-items: center;">
+                    <span style="display: inline-block; width: 12px; height: 12px; background: #f43f5e; border-radius: 50%; margin-right: 5px;"></span>
+                    <span style="font-size: 12px;">獲得鍛えるくん®</span>
+                </div>
+                <div style="display: flex; align-items: center;">
+                    <span style="display: inline-block; width: 12px; height: 12px; background: #8b5cf6; border-radius: 50%; margin-right: 5px;"></span>
+                    <span style="font-size: 12px;">自力でSaaS作れるくん®</span>
+                </div>
+                <div style="display: flex; align-items: center;">
+                    <span style="display: inline-block; width: 12px; height: 12px; background: #f59e0b; border-radius: 50%; margin-right: 5px;"></span>
+                    <span style="font-size: 12px;">インハウスキャンプ®</span>
+                </div>
+            </div>
+            
+            <div class="service-outline">
+                <!-- 戦略立案 (トップレベル) -->
+                <div class="hierarchy-box strategy-box" style="margin-bottom: 10px;">
+                    <div class="icon-circle">
+                        <i class="fas fa-chess"></i>
+                    </div>
+                    <h3 style="font-size: 18px; font-weight: bold; color: #1e40af;">戦略</h3>
+                </div>
+                <div class="arrow-down" style="border-top-color: #3b82f6;"></div>
+                
+                <!-- PR/獲得 (第2階層) -->
+                <div style="display: flex; justify-content: center; gap: 100px;">
+                    <!-- PR部分 -->
+                    <div class="branch-column">
+                        <div class="hierarchy-box type-box">
+                            <div class="icon-circle">
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                            <h4 style="font-size: 16px; font-weight: bold; color: #1e3a8a;">PR</h4>
+                        </div>
+                        <div class="arrow-down" style="border-top-color: #60a5fa;"></div>
+                        
+                        <!-- インハウス/代理店 (第3階層) -->
+                        <div style="display: flex; justify-content: center; gap: 60px;">
+                            <!-- インハウス -->
+                            <div style="position: relative;">
+                                <div class="hierarchy-box channel-box">
+                                    <div class="icon-circle">
+                                        <i class="fas fa-home"></i>
+                                    </div>
+                                    <h5 style="font-weight: bold; color: #1e3a8a; font-size: 14px;">インハウス</h5>
+                                </div>
+                                <div class="arrow-down" style="border-top-color: #3b82f6;"></div>
+                                
+                                <!-- インハウス配下の SaaS と実働 -->
+                                <div>
+                                    <div class="hierarchy-box saas-box" style="background: #dbeafe; border-color: #3b82f6;">
+                                        <div class="icon-circle">
+                                            <i class="fas fa-laptop-code"></i>
+                                        </div>
+                                        <h6 style="font-weight: bold; color: #1e3a8a; font-size: 12px;">SaaS</h6>
+                                    </div>
+                                    <div class="arrow-down" style="border-top-color: #3b82f6;"></div>
+                                    <div class="hierarchy-box execution-box" style="background: #dbeafe; border-color: #3b82f6;">
+                                        <div class="icon-circle">
+                                            <i class="fas fa-cogs"></i>
+                                        </div>
+                                        <h6 style="font-weight: bold; color: #1e3a8a; font-size: 12px;">実働</h6>
+                                    </div>
+                                </div>
+                                
+                                <!-- 第一想起取れるくん範囲 -->
+                                <div class="service-overlay first-service" style="top: -5px; left: -15px; width: 130px; height: 220px;"></div>
+                                <div class="service-label first-label" style="top: 90px; left: -80px;">
+                                    <i class="fas fa-bullseye" style="margin-right: 3px;"></i>第一想起取れるくん®
+                                </div>
+                            </div>
+                            
+                            <!-- 代理店 -->
+                            <div>
+                                <div class="hierarchy-box channel-box">
+                                    <div class="icon-circle">
+                                        <i class="fas fa-handshake"></i>
+                                    </div>
+                                    <h5 style="font-weight: bold; color: #1e3a8a; font-size: 14px;">代理店</h5>
+                                </div>
+                                <div class="arrow-down" style="border-top-color: #3b82f6;"></div>
+                                
+                                <!-- 代理店配下の SaaS と実働 -->
+                                <div>
+                                    <div class="hierarchy-box saas-box" style="background: #e0f2fe; border-color: #38bdf8;">
+                                        <div class="icon-circle">
+                                            <i class="fas fa-laptop-code"></i>
+                                        </div>
+                                        <h6 style="font-weight: bold; color: #1e3a8a; font-size: 12px;">SaaS</h6>
+                                    </div>
+                                    <div class="arrow-down" style="border-top-color: #38bdf8;"></div>
+                                    <div class="hierarchy-box execution-box" style="background: #e0f2fe; border-color: #38bdf8;">
+                                        <div class="icon-circle">
+                                            <i class="fas fa-cogs"></i>
+                                        </div>
+                                        <h6 style="font-weight: bold; color: #1e3a8a; font-size: 12px;">実働</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 獲得部分 -->
+                    <div class="branch-column">
+                        <div class="hierarchy-box type-box">
+                            <div class="icon-circle">
+                                <i class="fas fa-funnel-dollar"></i>
+                            </div>
+                            <h4 style="font-size: 16px; font-weight: bold; color: #1e3a8a;">獲得</h4>
+                        </div>
+                        <div class="arrow-down" style="border-top-color: #60a5fa;"></div>
+                        
+                        <!-- インハウス/代理店 (第3階層) -->
+                        <div style="display: flex; justify-content: center; gap: 60px;">
+                            <!-- インハウス -->
+                            <div style="position: relative;">
+                                <div class="hierarchy-box channel-box">
+                                    <div class="icon-circle">
+                                        <i class="fas fa-home"></i>
+                                    </div>
+                                    <h5 style="font-weight: bold; color: #1e3a8a; font-size: 14px;">インハウス</h5>
+                                </div>
+                                <div class="arrow-down" style="border-top-color: #3b82f6;"></div>
+                                
+                                <!-- インハウス配下の SaaS と実働 -->
+                                <div>
+                                    <div class="hierarchy-box saas-box" style="background: #dbeafe; border-color: #3b82f6;">
+                                        <div class="icon-circle">
+                                            <i class="fas fa-laptop-code"></i>
+                                        </div>
+                                        <h6 style="font-weight: bold; color: #1e3a8a; font-size: 12px;">SaaS</h6>
+                                    </div>
+                                    <div class="arrow-down" style="border-top-color: #3b82f6;"></div>
+                                    <div class="hierarchy-box execution-box" style="background: #dbeafe; border-color: #3b82f6;">
+                                        <div class="icon-circle">
+                                            <i class="fas fa-cogs"></i>
+                                        </div>
+                                        <h6 style="font-weight: bold; color: #1e3a8a; font-size: 12px;">実働</h6>
+                                    </div>
+                                </div>
+                                
+                                <!-- 獲得鍛えるくん範囲 -->
+                                <div class="service-overlay third-service" style="top: -5px; left: -15px; width: 130px; height: 220px;"></div>
+                                <div class="service-label third-label" style="top: 90px; left: -80px;">
+                                    <i class="fas fa-dumbbell" style="margin-right: 3px;"></i>獲得鍛えるくん®
+                                </div>
+                            </div>
+                            
+                            <!-- 代理店 -->
+                            <div style="position: relative;">
+                                <div class="hierarchy-box channel-box">
+                                    <div class="icon-circle">
+                                        <i class="fas fa-handshake"></i>
+                                    </div>
+                                    <h5 style="font-weight: bold; color: #1e3a8a; font-size: 14px;">代理店</h5>
+                                </div>
+                                <div class="arrow-down" style="border-top-color: #3b82f6;"></div>
+                                
+                                <!-- 代理店配下の SaaS と実働 -->
+                                <div>
+                                    <div class="hierarchy-box saas-box" style="background: #e0f2fe; border-color: #38bdf8;">
+                                        <div class="icon-circle">
+                                            <i class="fas fa-laptop-code"></i>
+                                        </div>
+                                        <h6 style="font-weight: bold; color: #1e3a8a; font-size: 12px;">SaaS</h6>
+                                    </div>
+                                    <div class="arrow-down" style="border-top-color: #38bdf8;"></div>
+                                    <div class="hierarchy-box execution-box" style="background: #e0f2fe; border-color: #38bdf8;">
+                                        <div class="icon-circle">
+                                            <i class="fas fa-cogs"></i>
+                                        </div>
+                                        <h6 style="font-weight: bold; color: #1e3a8a; font-size: 12px;">実働</h6>
+                                    </div>
+                                </div>
+                                
+                                <!-- 獲得取れるくん範囲 -->
+                                <div class="service-overlay second-service" style="top: -5px; left: -15px; width: 130px; height: 220px;"></div>
+                                <div class="service-label second-label" style="top: 90px; right: -80px;">
+                                    <i class="fas fa-chart-line" style="margin-right: 3px;"></i>獲得取れるくん®
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- インハウスキャンプ範囲 -->
+                <div class="service-overlay fifth-service" style="top: -50px; left: 50%; transform: translateX(-50%); width: 90%; height: 440px;"></div>
+                <div class="service-label fifth-label" style="top: 180px; left: 50%; transform: translateX(-50%);">
+                    <i class="fas fa-campground" style="margin-right: 3px;"></i>インハウスキャンプ®
+                </div>
+                
+                <!-- 自力でSaaS作れるくん範囲 -->
+                <div class="service-overlay fourth-service" style="bottom: 10px; left: 50%; transform: translateX(-50%); width: 95%; height: 140px;"></div>
+                <div class="service-label fourth-label" style="bottom: 30px; left: 50%; transform: translateX(-50%);">
+                    <i class="fas fa-laptop-code" style="margin-right: 3px;"></i>自力でSaaS作れるくん®
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 各種サービス紹介 -->
     <section class="service-lineup">
         <div class="container">
-            <h2 class="section-title">senjin代理店メニュー</h2>
-            <div class="service-intro">
-                <p>senjinでは成果が出ない場合には代金はいただいておりません。<strong>「すべて成果報酬」</strong>でサービス設計を行っています。</p>
-                <p>senjinでは、マーケティングの全工程をAIエージェントがサポートするマーケティング領域の「AIネイティブ化」を既に実現しているからこそ、必ず成果にコミット出来るという自信があります。</p>
-            </div>
+            <h2 class="section-title">各種サービス紹介</h2>
             
             <div class="lineup-grid">
                 <div class="lineup-item">
-                    <h3>📱 SNS広告（獲得取れる君）</h3>
-                    <p class="for-text">業界最大規模の運用実績とAI自動化で、獲得効率を最大化</p>
-                    <ul>
-                        <li>美容医療クリニック・化粧品・スクール等での月間45億円市場での実績</li>
-                        <li>AI台本生成→素材作成→運用まで自動化されたワークフロー</li>
-                        <li>クリエイティブ制作から効果測定まで内製化</li>
-                    </ul>
+                    <h3>【認知獲得】第一想起取れるくん</h3>
+                    <p class="for-text">AIで、市場の"第一想起"をデザインする。</p>
+                    <p>弊社が保有する1,000以上のSNSアカウント群から、同時多発的にオーガニック（自然発生的）な投稿を実施。AIが最適な投稿内容や構成をリアルタイムで分析・改善し、ポジティブな認知を爆発的に獲得します。Amazonや楽天での売上最大化、サービス名の指名検索数の増加に直結する、新時代の認知施策です。</p>
                 </div>
-
+                
                 <div class="lineup-item">
-                    <h3>📈 SNS PR（第一想起とれる君）</h3>
-                    <p class="for-text">Amazon 1位獲得実績: オーガニックバズでモール売上を直接押し上げ</p>
-                    <ul>
-                        <li>TikTok→amazonでの 689件/日のバズ実績</li>
-                        <li>オーガニック視聴数保証のビジネスモデル</li>
-                        <li>モール連動で態度変容から購買まで一気通貫</li>
-                        <li>成功事例: リノンAmazon1位獲得、キラトス爆売れ等</li>
-                    </ul>
+                    <h3>【売上直結】獲得取れるくん</h3>
+                    <p class="for-text">国内No.1実績。AIで"獲得"を最大化する。</p>
+                    <p>売上への直結に特化した、成果報酬型広告運用代行サービスです。動画広告出稿額・国内No.1の実績を誇る私たちのノウハウを基盤に、AIがクリエイティブを高速で改善し、コンバージョン（成果）の最大化を実現。出稿戦略・制作・運用・改善まで一気通貫で担い、リスクなく売上を伸ばします。</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Consulting Menu -->
-    <section class="service-lineup">
-        <div class="container">
-            <h2 class="section-title">senjinコンサルティングメニュー</h2>
-            <div class="service-intro">
-                <p>senjinではAIによる「マーケティングの一般化」を目指しています。</p>
-                <p>コンサルティングを通じて御社のマーケティングを「代理店なしで完結させる」ことをゴールに、AIネイティブな社内体制の構築から商品設計まで幅広くサポートいたします。</p>
-            </div>
-            
-            <div class="lineup-grid">
+                
                 <div class="lineup-item">
-                    <h3>🎯 総合マーケティング戦略</h3>
-                    <p class="for-text">For: 月間広告予算3,000万円以上のD2C・EC事業者</p>
-                    <ul>
-                        <li>債務整理・AGA・美容等での月間45億円市場での実績</li>
-                        <li>ROAS 120%以上保証の成果報酬型運用</li>
-                        <li>獲得からブランディングまで一気通貫設計</li>
-                    </ul>
+                    <h3>【組織構築】獲得鍛えるくん</h3>
+                    <p class="for-text">"代理店いらず"の自立型マーケティング組織へ。</p>
+                    <p>広告代理店に依存しない、「自立型マーケティング組織」を貴社内に構築するプログラムです。AIによって広告運用・分析・制作のハードルが劇的に下がった今、企業が自らの意思とスピードで事業を動かすためのマーケティング組織は、必要不可欠な経営基盤です。人材育成からAIツール導入、ナレッジ共有体制の構築まで幅広く支援します。</p>
                 </div>
-
+                
                 <div class="lineup-item">
-                    <h3>🎓 インハウス支援プログラム（インハウスキャンプ）</h3>
-                    <p class="for-text">6ヶ月で広告のプロを育成: ONE MEDICAL等での1,000万円売上達成実績</p>
-                    <ul>
-                        <li>月100万円×6ヶ月の実績保証型育成プログラム</li>
-                        <li>自社開発AIツール群の導入支援込み</li>
-                        <li>現役で月商2.6億円達成チームが直接指導</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Results -->
-    <section class="results-section">
-        <div class="container">
-            <h2 class="section-title">実績・事例</h2>
-            <div class="results-grid">
-                <div class="result-card">
-                    <div class="result-number">6.6億円</div>
-                    <div class="result-label">総売上/四半期</div>
-                </div>
-                <div class="result-card">
-                    <div class="result-number">100件超</div>
-                    <div class="result-label">管理案件数</div>
-                </div>
-                <div class="result-card">
-                    <div class="result-number">30%以上</div>
-                    <div class="result-label">継続率（高水準）</div>
+                    <h3>【業務効率化】各種SaaS</h3>
+                    <p class="for-text">現場のノウハウを結晶化したAI-SaaS群。</p>
+                    <p>私たちが日々、現場で成果を出すために使用しているマーケティングノウハウそのものを、SaaSとして提供します。広告作成フローの自動化、レポーティングの効率化など、現場の「再現性のある成功パターン」のみを詰め込んだツール群が、貴社のマーケティング業務を根本から変革します。</p>
                 </div>
             </div>
         </div>

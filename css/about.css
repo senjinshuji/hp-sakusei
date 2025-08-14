@@ -96,10 +96,8 @@
 }
 
 .message-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-xl);
-    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
     margin-top: var(--spacing-xl);
 }
 
@@ -122,15 +120,16 @@
     border-top: 2px solid var(--primary-color);
 }
 
-.executive-info .name {
-    font-size: 1.25rem;
-    font-weight: var(--font-weight-bold);
+.executive-info .company {
+    font-size: 1rem;
+    color: var(--text-light);
     margin-bottom: var(--spacing-xs);
-    color: var(--text-dark);
 }
 
 .executive-info .position {
-    color: var(--text-light);
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--text-dark);
 }
 
 .message-image {
@@ -207,13 +206,22 @@
 }
 
 .access-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-xl);
+    max-width: 900px;
+    margin: 0 auto;
     margin-top: var(--spacing-xl);
 }
 
-.access-info h3 {
+.office-section {
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.office-section:last-child {
+    border-bottom: none;
+}
+
+.office-section h3 {
     font-size: 1.5rem;
     margin-bottom: var(--spacing-md);
     color: var(--text-dark);
@@ -276,7 +284,7 @@
 .timeline::before {
     content: '';
     position: absolute;
-    left: 100px;
+    left: 200px;
     top: 0;
     bottom: 0;
     width: 2px;
@@ -293,7 +301,7 @@
 .timeline-item::before {
     content: '';
     position: absolute;
-    left: 93px;
+    left: 193px;
     top: 8px;
     width: 16px;
     height: 16px;
@@ -304,10 +312,11 @@
 }
 
 .timeline-item .year {
-    min-width: 80px;
-    font-size: 1.5rem;
+    min-width: 180px;
+    font-size: 1.125rem;
     font-weight: var(--font-weight-bold);
     color: var(--primary-color);
+    text-align: left;
 }
 
 .timeline-item .content {
@@ -315,15 +324,10 @@
     padding-left: var(--spacing-lg);
 }
 
-.timeline-item h3 {
-    font-size: 1.25rem;
-    margin-bottom: var(--spacing-xs);
-    color: var(--text-dark);
-}
-
 .timeline-item p {
     color: var(--text-light);
     line-height: 1.6;
+    font-size: 1.0625rem;
 }
 
 /* Animation */
@@ -340,16 +344,9 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-    .message-content {
-        grid-template-columns: 1fr;
-    }
-    
-    .message-image {
-        order: -1;
-    }
-    
-    .access-content {
-        grid-template-columns: 1fr;
+    .office-section {
+        margin-bottom: var(--spacing-lg);
+        padding-bottom: var(--spacing-lg);
     }
     
     .map-placeholder {

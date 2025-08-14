@@ -77,9 +77,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
     
     // Observe elements for animation
-    const animatedElements = document.querySelectorAll('.service-card, .position-card, .news-item, .about-content, .cta-content');
+    const animatedElements = document.querySelectorAll('.service-card, .position-card, .news-item, .about-content, .cta-content, .timeline-item');
     animatedElements.forEach(el => {
-        el.classList.add('animate-on-scroll');
+        if (!el.classList.contains('timeline-item')) {
+            el.classList.add('animate-on-scroll');
+        }
         observer.observe(el);
     });
     

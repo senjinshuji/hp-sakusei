@@ -888,10 +888,12 @@
                         </div>
                     `).join('')}
                 </div>
-                <a href="${position.ctaUrl}" target="_blank" rel="noopener" class="modal-cta">
-                    ${position.ctaText}
-                    <i class="material-icons">open_in_new</i>
-                </a>
+                <div style="text-align: center;">
+                    <a href="${position.ctaUrl}" target="_blank" rel="noopener" class="modal-cta">
+                        ${position.ctaText}
+                        <i class="material-icons">open_in_new</i>
+                    </a>
+                </div>
             `;
             
             document.getElementById('position-modal').classList.add('active');

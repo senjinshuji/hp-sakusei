@@ -613,12 +613,44 @@
                 
                 <!-- 男女比 -->
                 <div style="background:#0e0e0e; border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:18px;">
-                    <h3 style="margin:0 0 10px; font-size:16px; font-weight:800;">男女比率</h3>
-                    <div style="width:220px; height:220px; border-radius:50%; background:conic-gradient(#7cffb2 0 70%, #ff88cc 70% 100%); position:relative; margin:6px auto; display:grid; place-items:center;">
-                        <div style="position:absolute; inset:18%; border-radius:50%; background:#1a1a1a;"></div>
-                        <div style="position:absolute; text-align:center; font-weight:800; font-size:28px;">
-                            7 : 3<span style="display:block; font-size:12px; color:#bfbfbf; font-weight:600; margin-top:4px;">男性 : 女性</span>
-                        </div>
+                    <div style="background:#fff; border-radius:8px; padding:10px;">
+                        <svg width="100%" height="100%" viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+                            <defs>
+                                <style>
+                                    .jp{font-family: "Noto Sans JP","Hiragino Sans","Yu Gothic",Arial,sans-serif;}
+                                    .title{font-size:48px; fill:#222;}
+                                    .axis{stroke:#E6E6E6; stroke-width:4}
+                                    .ring{fill:none; stroke-linecap:butt; stroke-width:120}
+                                    .labelBig{font-size:72px; font-weight:800; fill:#00C6D3}
+                                    .labelUnit{font-size:36px; font-weight:800; fill:#00C6D3}
+                                    .percent{font-size:32px; font-weight:700; fill:#00C6D3}
+                                    .call{stroke-width:3; fill:none; stroke-linecap:square; stroke-linejoin:miter}
+                                </style>
+                            </defs>
+                            <rect x="0" y="0" width="1200" height="900" fill="#FFFFFF"/>
+                            <text x="80" y="100" class="jp title">男女比</text>
+                            <line x1="0" y1="140" x2="1200" y2="140" class="axis"/>
+                            <!-- 男性 70% (ブルー) -->
+                            <circle cx="600" cy="520" r="280" class="ring" stroke="#6FE8F0" transform="rotate(-90 600 520)" stroke-dasharray="1231.5044 527.788" stroke-dashoffset="0"/>
+                            <!-- 女性 30% (ピンク) -->
+                            <circle cx="600" cy="520" r="280" class="ring" stroke="#FFB6C1" transform="rotate(-90 600 520)" stroke-dasharray="527.788 1231.5044" stroke-dashoffset="-1231.5044"/>
+                            <circle cx="600" cy="520" r="200" fill="#FFFFFF"/>
+                            <!-- 中央の男女比率 -->
+                            <text x="600" y="490" text-anchor="middle" class="jp" style="font-size:80px; font-weight:800; fill:#00C6D3;">男女比率</text>
+                            <text x="600" y="610" text-anchor="middle" class="jp" style="font-size:80px; font-weight:700; fill:#00C6D3;">7:3</text>
+                            <!-- 男性（右上・水色部分から線 少し下げる） -->
+                            <polyline class="call" stroke="#00C6D3" points="760,280 820,240 960,240"/>
+                            <text x="965" y="230" class="jp" text-anchor="start" style="fill:#00C6D3;">
+                                <tspan class="labelBig">男性</tspan>
+                            </text>
+                            <text x="965" y="265" class="jp percent" text-anchor="start" style="fill:#00C6D3;">70%</text>
+                            <!-- 女性（線位置を円の太さの中心から出す） -->
+                            <polyline class="call" stroke="#e48ca1" points="404,320 260,320"/>
+                            <text x="255" y="310" class="jp" text-anchor="end" style="fill:#e48ca1;">
+                                <tspan class="labelBig" style="fill:#e48ca1;">女性</tspan>
+                            </text>
+                            <text x="255" y="345" class="jp percent" text-anchor="end" style="fill:#e48ca1;">30%</text>
+                        </svg>
                     </div>
                 </div>
                 

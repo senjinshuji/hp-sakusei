@@ -203,8 +203,7 @@ p {
 .dropdown-menu {
     position: absolute;
     top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
     background: var(--gray-100);
     box-shadow: 0 8px 24px rgba(69, 238, 255, 0.2);
     border-radius: 8px;
@@ -238,6 +237,7 @@ p {
     transition: all var(--transition-fast);
     font-size: 0.95rem;
     white-space: nowrap;
+    text-align: left;
 }
 
 .dropdown-menu a:hover {

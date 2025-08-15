@@ -11,7 +11,7 @@
    - 状態: 安定版
 
 2. **実験環境（experimental-versionブランチ）**
-   - URL: https://hp-sakusei-git-experimental-version-senjinshujis-projects.vercel.app/
+   - URL: FV
    - テーマ: ダークテーマ（黒ベース）
    - 状態: 実験版（タイトルに[実験版]表記）
 

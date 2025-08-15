@@ -214,10 +214,10 @@ p {
     visibility: hidden;
     transition: all var(--transition-fast);
     margin-top: var(--spacing-sm);
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: var(--spacing-xs);
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: repeat(2, 1fr) !important;
+    gap: var(--spacing-xs) !important;
 }
 
 .dropdown:hover .dropdown-menu {

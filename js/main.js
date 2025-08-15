@@ -174,7 +174,7 @@ style.textContent = `
     
     .site-header.scrolled {
         padding: 0.5rem 0;
-        background: rgba(255, 255, 255, 0.98);
+        background: rgba(0, 0, 0, 0.98);
     }
     
     .site-header.hidden {

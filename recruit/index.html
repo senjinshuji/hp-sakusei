@@ -223,6 +223,114 @@
         
         .position-icon {
             color: #45EEFF;
+            transition: transform 0.3s;
+        }
+        
+        .position-item.active .position-icon {
+            transform: rotate(45deg);
+        }
+        
+        /* Position Modal */
+        .position-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 10000;
+            overflow-y: auto;
+            padding: 40px 20px;
+        }
+        
+        .position-modal.active {
+            display: block;
+        }
+        
+        .modal-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #1a1a1a;
+            border-radius: 12px;
+            padding: 40px;
+            position: relative;
+            color: #fff;
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 32px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .modal-close:hover {
+            transform: rotate(90deg);
+        }
+        
+        .modal-header {
+            margin-bottom: 32px;
+        }
+        
+        .modal-header h2 {
+            font-size: 32px;
+            font-weight: 900;
+            margin-bottom: 16px;
+        }
+        
+        .modal-description {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 8px;
+            color: #ccc;
+        }
+        
+        .modal-details {
+            display: grid;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+        
+        .detail-item {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 16px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .detail-label {
+            font-weight: 700;
+            color: #45EEFF;
+        }
+        
+        .detail-value {
+            color: #eee;
+            line-height: 1.6;
+        }
+        
+        .modal-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 32px;
+            background: #45EEFF;
+            color: #000;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        
+        .modal-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(69, 238, 255, 0.3);
         }
     </style>
 </head>
@@ -559,39 +667,23 @@
             <h1 style="font-weight:900; font-size:clamp(48px, 12vw, 140px); line-height:1; letter-spacing:-0.02em; color:#fff; margin:0; padding-top:8px;">POSITION 募集職種</h1>
             <hr style="border:0; border-top:1px solid rgba(255,255,255,0.2); margin:clamp(16px,2vw,24px) 0 clamp(20px,4vw,48px);">
             <div class="positions-list" style="max-width:none; padding:0;">
-                <div class="position-item" style="justify-content:flex-start; gap:24px;">
+                <div class="position-item" style="justify-content:flex-start; gap:24px;" onclick="openPositionModal('marketer')">
                     <i class="material-icons position-icon">add</i>
                     <p class="position-title">WEBマーケター</p>
                 </div>
-                <div class="position-item" style="justify-content:flex-start; gap:24px;">
+                <div class="position-item" style="justify-content:flex-start; gap:24px;" onclick="openPositionModal('engineer')">
                     <i class="material-icons position-icon">add</i>
                     <p class="position-title">WEBエンジニア</p>
                 </div>
-                <div class="position-item" style="justify-content:flex-start; gap:24px;">
-                    <i class="material-icons position-icon">add</i>
-                    <p class="position-title">グロースハッカー</p>
-                </div>
-                <div class="position-item" style="justify-content:flex-start; gap:24px;">
+                <div class="position-item" style="justify-content:flex-start; gap:24px;" onclick="openPositionModal('sales')">
                     <i class="material-icons position-icon">add</i>
                     <p class="position-title">営業職</p>
                 </div>
-                <div class="position-item" style="justify-content:flex-start; gap:24px;">
-                    <i class="material-icons position-icon">add</i>
-                    <p class="position-title">ライティング編集者</p>
-                </div>
-                <div class="position-item" style="justify-content:flex-start; gap:24px;">
+                <div class="position-item" style="justify-content:flex-start; gap:24px;" onclick="openPositionModal('video')">
                     <i class="material-icons position-icon">add</i>
                     <p class="position-title">動画クリエイター</p>
                 </div>
-                <div class="position-item" style="justify-content:flex-start; gap:24px;">
-                    <i class="material-icons position-icon">add</i>
-                    <p class="position-title">WEBデザイナー</p>
-                </div>
-                <div class="position-item" style="justify-content:flex-start; gap:24px;">
-                    <i class="material-icons position-icon">add</i>
-                    <p class="position-title">UI/UXデザイナー</p>
-                </div>
-                <div class="position-item" style="justify-content:flex-start; gap:24px;">
+                <div class="position-item" style="justify-content:flex-start; gap:24px;" onclick="openPositionModal('manager')">
                     <i class="material-icons position-icon">add</i>
                     <p class="position-title">管理部長</p>
                 </div>
@@ -604,7 +696,7 @@
         <div class="container">
             <h2 class="section-title" style="text-align: center; color: #fff;">エントリー</h2>
             <div class="entry-content" style="text-align: center;">
-                <p style="color: #fff; font-size: 18px; font-weight: 500;">Senjin Holdingsで世界を加速させる仲間を募集しています。</p>
+                <p style="color: #fff; font-size: 18px; font-weight: 500;">共にビジネスに熱狂したい仲間を募集しています。</p>
                 <p style="color: #fff; font-size: 18px; font-weight: 500;">熱量と実行力に自信がある方は、ぜひご応募ください。</p>
                 <div class="entry-buttons" style="margin-top: 48px;">
                     <a href="/contact/?type=recruit" style="display: inline-block; padding: 20px 48px; background: #45EEFF; color: #000; font-size: 20px; font-weight: 700; text-decoration: none; border-radius: 8px; transition: all 0.3s; box-shadow: 0 4px 20px rgba(69, 238, 255, 0.3);" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 30px rgba(69, 238, 255, 0.5)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(69, 238, 255, 0.3)';">カジュアル面談を申し込む</a>
@@ -661,7 +753,148 @@
         </div>
     </footer>
 
+    <!-- Position Modals -->
+    <div id="position-modal" class="position-modal" onclick="closePositionModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closePositionModal()">&times;</button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="../js/main.js"></script>
+    <script>
+        const positions = {
+            marketer: {
+                title: 'WEBマーケター',
+                catch: '学歴不問！熱意あるあなた！WEBマーケティングに夢中になりませんか？',
+                description: '「web広告代理店で日本一」という目標を一緒に目指してくださる方をお待ちしています！Senjinで人生を変えてみませんか？',
+                details: [
+                    {label: '雇用形態', value: '正社員'},
+                    {label: '勤務時間', value: '9:00～18:00（実働時間8時間、休憩60分）<br><br>※勤務時間は柔軟（変動あり）で、残業はほぼありません<br>※リモートワークや、フレックスも可'},
+                    {label: '勤務地', value: '★「飯田橋駅」徒歩2分<br>★転勤なし<br><br>東京都千代田区富士見2丁目6-9 雄山閣ビル5F'},
+                    {label: '交通アクセス', value: '各線「飯田橋駅」より徒歩2分'},
+                    {label: '給与', value: '月給26万～40万円 ＋ 各種手当<br><br>※上記はあくまで最低給与額です。<br>　経験や能力を考慮の上、当社規定により決定します。<br>※試用期間1カ月(期間中は月給26.3万円以上)'},
+                    {label: '昇給・賞与', value: '昇給／年2回<br>賞与／あり<br>インセンティブ（高還元率）'},
+                    {label: '諸手当', value: '交通費全額支給<br>住宅手当（条件付き）'},
+                    {label: '休日・休暇', value: '【年間休日100日以上】<br><br>完全週休2日制（土日休み）<br>年末年始(5日間)<br>有給（半年後から年10日）'}
+                ],
+                ctaUrl: 'https://liff.line.me/1661162959-yQjvx1VQ/landing?follow=%40450xubfm&lp=KiDUlG&liff_id=1661162959-yQjvx1VQ',
+                ctaText: '選考にエントリーする'
+            },
+            engineer: {
+                title: 'WEBエンジニア',
+                catch: '本気で自分を成長させたいエンジニア大募集！',
+                description: '「web広告代理店で日本一」という目標を一緒に目指してくださる方をお待ちしています！Senjinで人生を変えてみませんか？',
+                details: [
+                    {label: '雇用形態', value: '正社員'},
+                    {label: '勤務時間', value: '9:00～18:00（実働時間8時間、休憩60分）<br><br>※勤務時間は柔軟（変動あり）で、残業はほぼありません<br>※リモートワークや、フレックスも可'},
+                    {label: '勤務地', value: '★「飯田橋駅」徒歩2分<br>★転勤なし<br><br>東京都千代田区富士見2丁目6-9 雄山閣ビル5F'},
+                    {label: '交通アクセス', value: '各線「飯田橋駅」より徒歩2分'},
+                    {label: '給与', value: '月給26万～40万円 ＋ 各種手当<br><br>※上記はあくまで最低給与額です。<br>　経験や能力を考慮の上、当社規定により決定します。<br>※試用期間1カ月(期間中は月給26.3万円以上)'},
+                    {label: '昇給・賞与', value: '昇給／年2回<br>賞与／あり<br>インセンティブ（高還元率）'},
+                    {label: '諸手当', value: '交通費全額支給<br>住宅手当（条件付き）'},
+                    {label: '休日・休暇', value: '【年間休日100日以上】<br><br>完全週休2日制（土日休み）<br>年末年始(5日間)<br>有給（半年後から年10日）'}
+                ],
+                ctaUrl: 'https://liff.line.me/1661162959-yQjvx1VQ/landing?follow=%40450xubfm&lp=KiDUlG&liff_id=1661162959-yQjvx1VQ',
+                ctaText: '選考にエントリーする'
+            },
+            sales: {
+                title: '営業職',
+                catch: 'マーケテイングとセールススキルが同時に身につく！BtoB営業立ち上げメンバーを募集！',
+                description: '「web広告代理店で日本一」という目標を一緒に目指してくださる方をお待ちしています！Senjinで人生を変えてみませんか？',
+                details: [
+                    {label: '雇用形態', value: '正社員'},
+                    {label: '勤務時間', value: '9:00～18:00（実働時間8時間、休憩60分）<br><br>※勤務時間は柔軟（変動あり）で、残業はほぼありません<br>※リモートワークや、フレックスも可'},
+                    {label: '勤務地', value: '★「飯田橋駅」徒歩2分<br>★転勤なし<br><br>東京都千代田区富士見2丁目6-9 雄山閣ビル5F'},
+                    {label: '交通アクセス', value: '各線「飯田橋駅」より徒歩2分'},
+                    {label: '給与', value: '月給26万～40万円 ＋ 各種手当<br><br>※上記はあくまで最低給与額です。<br>　経験や能力を考慮の上、当社規定により決定します。<br>※試用期間1カ月(期間中は月給26.3万円以上)'},
+                    {label: '昇給・賞与', value: '昇給／年2回<br>賞与／あり<br>インセンティブ（高還元率）'},
+                    {label: '諸手当', value: '交通費全額支給<br>住宅手当（条件付き）'},
+                    {label: '休日・休暇', value: '【年間休日100日以上】<br><br>完全週休2日制（土日休み）<br>年末年始(5日間)<br>有給（半年後から年10日）'}
+                ],
+                ctaUrl: 'https://liff.line.me/1661162959-yQjvx1VQ/landing?follow=%40450xubfm&lp=KiDUlG&liff_id=1661162959-yQjvx1VQ',
+                ctaText: '選考にエントリーする'
+            },
+            video: {
+                title: '動画クリエイター',
+                catch: 'SNS好き大歓迎！動画媒体をあなたのクリエイティブで席巻せよ',
+                description: '「web広告代理店で日本一」という目標を一緒に目指してくださる方をお待ちしています！Senjinで人生を変えてみませんか？',
+                details: [
+                    {label: '雇用形態', value: '正社員'},
+                    {label: '勤務時間', value: '9:00～18:00（実働時間8時間、休憩60分）<br><br>※勤務時間は柔軟（変動あり）で、残業はほぼありません<br>※リモートワークや、フレックスも可'},
+                    {label: '勤務地', value: '★「飯田橋駅」徒歩2分<br>★転勤なし<br><br>東京都千代田区富士見2丁目6-9 雄山閣ビル5F'},
+                    {label: '交通アクセス', value: '各線「飯田橋駅」より徒歩2分'},
+                    {label: '給与', value: '月給26万～40万円 ＋ 各種手当<br><br>※上記はあくまで最低給与額です。<br>　経験や能力を考慮の上、当社規定により決定します。<br>※試用期間1カ月(期間中は月給26.3万円以上)'},
+                    {label: '昇給・賞与', value: '昇給／年2回<br>賞与／あり<br>インセンティブ（高還元率）'},
+                    {label: '諸手当', value: '交通費全額支給<br>住宅手当（条件付き）'},
+                    {label: '休日・休暇', value: '【年間休日100日以上】<br><br>完全週休2日制（土日休み）<br>年末年始(5日間)<br>有給（半年後から年10日）'}
+                ],
+                ctaUrl: 'https://liff.line.me/1661162959-yQjvx1VQ/landing?follow=%40450xubfm&lp=KiDUlG&liff_id=1661162959-yQjvx1VQ',
+                ctaText: '選考にエントリーする'
+            },
+            manager: {
+                title: '管理部長',
+                catch: '前年比250%の急成長！勢いあるITベンチャーのコーポレートスタッフを募集！',
+                description: '「web広告代理店で日本一」という目標を一緒に目指してくださる方をお待ちしています！Senjinで人生を変えてみませんか？',
+                details: [
+                    {label: '雇用形態', value: '正社員'},
+                    {label: '勤務時間', value: '9:00～18:00（実働時間8時間、休憩60分）<br><br>※勤務時間は柔軟（変動あり）で、残業はほぼありません<br>※リモートワークや、フレックスも可'},
+                    {label: '勤務地', value: '★「飯田橋駅」徒歩2分<br>★転勤なし<br><br>東京都千代田区富士見2丁目6-9 雄山閣ビル5F'},
+                    {label: '交通アクセス', value: '各線「飯田橋駅」より徒歩2分'},
+                    {label: '給与', value: '応相談<br><br>　経験や能力を考慮の上、当社規定により決定します。<br>※試用期間1カ月'},
+                    {label: '昇給・賞与', value: '昇給／年2回<br>賞与／あり'},
+                    {label: '諸手当', value: '交通費全額支給<br>住宅手当（条件付き）'},
+                    {label: '休日・休暇', value: '【年間休日120日以上】<br><br>週休2日制（土日祝休み）<br>年末年始(5日間)<br>有給（半年後から年10日）'}
+                ],
+                ctaUrl: 'https://www.wantedly.com/projects/1307245',
+                ctaText: 'wantedlyで応募する'
+            }
+        };
+
+        function openPositionModal(positionKey) {
+            const position = positions[positionKey];
+            if (!position) return;
+            
+            const modalBody = document.getElementById('modal-body');
+            modalBody.innerHTML = `
+                <div class="modal-header">
+                    <h2>${position.title}</h2>
+                    <p class="modal-description" style="font-weight: 700; font-size: 18px; margin-bottom: 16px;">${position.catch}</p>
+                    <p class="modal-description">${position.description}</p>
+                </div>
+                <div class="modal-details">
+                    ${position.details.map(detail => `
+                        <div class="detail-item">
+                            <div class="detail-label">${detail.label}</div>
+                            <div class="detail-value">${detail.value}</div>
+                        </div>
+                    `).join('')}
+                </div>
+                <a href="${position.ctaUrl}" target="_blank" rel="noopener" class="modal-cta">
+                    ${position.ctaText}
+                    <i class="material-icons">open_in_new</i>
+                </a>
+            `;
+            
+            document.getElementById('position-modal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePositionModal(event) {
+            if (event && event.target.closest('.modal-content') && !event.target.classList.contains('modal-close')) {
+                return;
+            }
+            document.getElementById('position-modal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // ESCキーでモーダルを閉じる
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closePositionModal();
+            }
+        });
+    </script>
 </body>
 </html>

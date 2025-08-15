@@ -311,8 +311,8 @@ p {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: var(--primary-color);
-    color: var(--black);
+    background: rgba(69, 238, 255, 0.9);
+    color: #000;
     box-shadow: 0 4px 20px rgba(69, 238, 255, 0.3);
     transition: all var(--transition-normal);
     position: relative;
@@ -323,7 +323,8 @@ p {
     position: absolute;
     white-space: nowrap;
     font-size: 0.875rem;
-    font-weight: var(--font-weight-bold);
+    font-weight: 800;
+    color: #000;
     opacity: 0;
     transform: translateX(10px);
     transition: all var(--transition-normal);

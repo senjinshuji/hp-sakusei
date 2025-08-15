@@ -3,17 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recruit｜Senjin Holdings</title>
-    <meta name="description" content="Senjin Holdingsは若い才能が熱狂することで世界を変えていくと確信しています。学生時代の熱量以上で働きたい人をお待ちしています。">
+    <title>[実験版] Recruit｜Senjin Holdings</title>
+    <meta name="description" content="私たちは、メンバー全員が「人生の瞬間最大風速」を更新し続ける組織です。">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Serif+JP:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
     <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/recruit.css">
+    
+    <style>
+        /* Custom styles for new sections */
+        body {
+            background: #000;
+            color: #fff;
+        }
+        
+        /* FV Section */
+        .recruit-fv {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .recruit-fv img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7;
+        }
+        
+        .recruit-fv .content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 0 20px;
+        }
+        
+        /* Section 2 - About */
+        .about-section {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background-image: url('../images/②.png');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .about-content {
+            max-width: 600px;
+            padding: 80px 40px;
+        }
+        
+        .about-content h2 {
+            font-size: clamp(32px, 5vw, 56px);
+            font-weight: 900;
+            margin-bottom: 32px;
+            line-height: 1.2;
+        }
+        
+        .about-content p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 32px;
+        }
+        
+        .about-btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background: #45EEFF;
+            color: #000;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        
+        .about-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(69, 238, 255, 0.3);
+        }
+        
+        /* Members Voice Section */
+        .members-section {
+            padding: 80px 0;
+            background: #000;
+        }
+        
+        .members-section h2 {
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        
+        .members-subtitle {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 32px;
+            color: #ccc;
+        }
+        
+        .members-description {
+            max-width: 800px;
+            margin: 0 auto 48px;
+            text-align: center;
+            line-height: 1.8;
+            color: #eee;
+        }
+        
+        .members-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .member-card {
+            position: relative;
+            aspect-ratio: 1;
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .member-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .member-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        @media (max-width: 960px) {
+            .members-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .members-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        /* Positions Section */
+        .positions-section {
+            padding: 80px 0;
+            background: #000;
+        }
+        
+        .positions-list {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .position-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            margin-bottom: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .position-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .position-title {
+            font-size: 18px;
+            font-weight: 700;
+        }
+        
+        .position-icon {
+            color: #45EEFF;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -81,192 +268,319 @@
         </a>
     </div>
 
-    <!-- Page Hero -->
-    <section class="page-hero recruit-hero">
-        <div class="container">
-            <h1 class="page-title">RECRUIT</h1>
-            <p class="page-subtitle">若い才能が熱狂することで世界を変えていく</p>
+    <!-- FV Section -->
+    <section class="recruit-fv">
+        <img src="../images/FV画像.jpg" alt="Recruit Hero">
+        <div class="content">
+            <h1 style="font-size: clamp(48px, 8vw, 96px); font-weight: 900;">RECRUIT</h1>
+            <p style="font-size: 24px; margin-top: 16px;">人生の瞬間最大風速を更新せよ</p>
         </div>
     </section>
 
-    <!-- Breadcrumb -->
-    <nav class="breadcrumb">
+    <!-- Section 1: Intro -->
+    <section style="background:#000; padding:56px 20px 80px;">
+        <div style="max-width:1100px; margin:0 auto;">
+            <h1 style="color:#ff7a1a; font-weight:800; line-height:1.3; margin:0; font-size:clamp(26px, 4.2vw, 48px); text-align:center; font-family:'Noto Serif JP', serif;">
+                私たちは、メンバー全員が「人生の瞬間最大風速」を更新し続ける組織です。
+            </h1>
+            <div style="width:40px; height:2px; background:#aaa; margin:18px auto 32px; opacity:0.6;"></div>
+            <div style="font-size:clamp(15px, 2.2vw, 18px); line-height:2; text-align:center; font-family:'Noto Serif JP', serif;">
+                <p>皆さんが過去を振り返って、「楽しいな・充実していたな」って思っていた時って、<br>必ず一つのコトにのめりこめていて、そのコトに対して一緒にのめり込んでいる仲間が<br>いたはずなんですよね。</p>
+                <p>学生生活において、上記を実現するのは比較的簡単だと思っています。というのも、<br>サークルや部活などの目標を共有する団体の中で、自分が興味・関心を持つところに所属<br>すればいいから。只、社会人生活においてそれを実現することは難しいです。</p>
+                <p>いまいち仕事って具体的に何をするかわからないし、組織に入ってみないと自分に合う<br>組織かどうかわからない。蓋を開けてみないと分からないことが多すぎるからです。</p>
+                <p>だから、入社後にギャップを感じて、日曜日の夜になると「明日からまた仕事か...」と<br>ビジネスに後ろ向きな社会人が多くいるわけです。</p>
+                <p>私たちは、目を輝かせてイマの仕事の話だったり、これからのワクワクする未来の話を<br>する。仕事へ前向きなビジネスマンの集合体でありたいと思っています。この価値観に<br>共感する方は、ぜひ前のめりでご覧いただきたいと思います。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: About with Background -->
+    <section class="about-section">
+        <div class="about-content">
+            <h2>異才の融合が、世界を加速させる</h2>
+            <p>私たちSenjin Holdingsは、マーケター、エンジニア、アーティスト、学者、起業家が一体となった唯一の会社群。</p>
+            <p>世界を最も加速させるために、最前線のAI技術で効率を極限まで高めながらAIにはないアーティスト性を戦略に組み込んだマーケティングで利益創出を伴走します。</p>
+            <a href="https://hp-sakusei.vercel.app/about/" class="about-btn">私たちについて</a>
+        </div>
+    </section>
+
+    <!-- Section 3: Value -->
+    <section style="background:#000; padding:40px 16px 72px;">
+        <div style="max-width:1100px; margin:0 auto;">
+            <h1 style="font-weight:900; font-size:clamp(48px, 12vw, 140px); line-height:1; letter-spacing:-0.02em; color:#fff; margin:0; padding-top:8px;">Value</h1>
+            <hr style="border:0; border-top:1px solid rgba(255,255,255,0.2); margin:clamp(16px,2vw,24px) 0 clamp(20px,4vw,48px);">
+            <div style="width:0; height:0; border-left:48px solid transparent; border-right:0 solid transparent; border-top:48px solid #6EE7F0; margin:12px 0 0 12px;"></div>
+            <div style="display:grid; gap:clamp(20px,3vw,48px); grid-template-columns:1fr 1fr; margin-top:32px;">
+                <div style="font-weight:700; font-size:clamp(20px, 3.2vw, 28px); line-height:1.75; letter-spacing:0.01em; white-space:pre-line; color:#fff;">
+                    昨日の自分を<br>超え続ける
+                </div>
+                <div style="color:#fff; font-size:clamp(15px, 2.1vw, 18px); line-height:2.2;">
+                    <p style="margin:0 0 1.6em;">私たちは、現状に満足することなく、常に成長と進化を追求します。昨日できなかったことに今日挑戦し、今日の限界を明日は超えていく。一人ひとりの小さな成長が積み重なり、組織全体の大きな飛躍につながると信じています。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: CREDO -->
+    <section style="background:#000; padding:40px 20px;">
+        <div style="max-width:980px; margin:0 auto;">
+            <h1 style="font-size:clamp(32px, 6vw, 64px); font-weight:900; color:#fff; margin:0; line-height:1;">CREDO</h1>
+            <p style="font-size:clamp(12px, 1.6vw, 14px); letter-spacing:0.1em; font-weight:700; color:#ccc; margin:4px 0 48px;">私たちの行動指針</p>
+            
+            <div style="display:flex; gap:24px; margin-bottom:56px; align-items:flex-start;">
+                <div style="font-size:clamp(60px, 8vw, 110px); font-weight:900; color:rgba(255, 255, 255, 0.12); line-height:1; flex-shrink:0; min-width:80px; text-align:right;">01</div>
+                <div style="flex:1;">
+                    <h2 style="font-size:clamp(24px, 3.6vw, 40px); font-weight:700; margin:0 0 12px; color:#fff; line-height:1.3;">No.1にこだわれ</h2>
+                    <p style="font-size:16px; color:#ccc; margin:0;">やるからには1番を取り続けよう。1位じゃないと面白くない。</p>
+                </div>
+            </div>
+            
+            <div style="display:flex; gap:24px; margin-bottom:56px; align-items:flex-start;">
+                <div style="font-size:clamp(60px, 8vw, 110px); font-weight:900; color:rgba(255, 255, 255, 0.12); line-height:1; flex-shrink:0; min-width:80px; text-align:right;">02</div>
+                <div style="flex:1;">
+                    <h2 style="font-size:clamp(24px, 3.6vw, 40px); font-weight:700; margin:0 0 12px; color:#fff; line-height:1.3;">Output is everything</h2>
+                    <p style="font-size:16px; color:#ccc; margin:0;">生み出した成果にこそ価値がある。</p>
+                </div>
+            </div>
+            
+            <div style="display:flex; gap:24px; margin-bottom:56px; align-items:flex-start;">
+                <div style="font-size:clamp(60px, 8vw, 110px); font-weight:900; color:rgba(255, 255, 255, 0.12); line-height:1; flex-shrink:0; min-width:80px; text-align:right;">03</div>
+                <div style="flex:1;">
+                    <h2 style="font-size:clamp(24px, 3.6vw, 40px); font-weight:700; margin:0 0 12px; color:#fff; line-height:1.3;">キャパってる？w</h2>
+                    <p style="font-size:16px; color:#ccc; margin:0;">発狂するくらい忙しい時が一番成長してる。</p>
+                </div>
+            </div>
+            
+            <div style="display:flex; gap:24px; margin-bottom:56px; align-items:flex-start;">
+                <div style="font-size:clamp(60px, 8vw, 110px); font-weight:900; color:rgba(255, 255, 255, 0.12); line-height:1; flex-shrink:0; min-width:80px; text-align:right;">04</div>
+                <div style="flex:1;">
+                    <h2 style="font-size:clamp(24px, 3.6vw, 40px); font-weight:700; margin:0 0 12px; color:#fff; line-height:1.3;">どうやったら出来る？</h2>
+                    <p style="font-size:16px; color:#ccc; margin:0;">できない理由を語る前にできる方法を考える。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Members Voice -->
+    <section class="members-section">
         <div class="container">
-            <ul>
-                <li><a href="/">HOME</a></li>
-                <li>RECRUIT</li>
+            <h2>MEMBER</h2>
+            <p class="members-subtitle">私たちは、メンバー全員が「人生の瞬間最大風速」を更新し続ける組織、です。</p>
+            <p class="members-description">
+                国内最大級の参加者を誇るビジネスコンテストでの優勝、<br>
+                投資コンテストでトップの運用益を記録した学生、<br>
+                国内最大エントリー数のインターンシップでの最優秀賞受賞者、<br>
+                元年代別サッカー日本代表、など様々なバックグラウンドを持った<br>
+                優秀なメンバーが「本気」で「熱量高く」切磋琢磨している環境です。
+            </p>
+            <div class="members-grid">
+                <a href="https://www.wantedly.com/companies/senjinholdings/post_articles" target="_blank" class="member-card">
+                    <img src="../images/人1.png" alt="Member 1">
+                </a>
+                <a href="https://www.wantedly.com/companies/senjinholdings/post_articles" target="_blank" class="member-card">
+                    <img src="../images/人2.png" alt="Member 2">
+                </a>
+                <a href="https://www.wantedly.com/companies/senjinholdings/post_articles" target="_blank" class="member-card">
+                    <img src="../images/人3.png" alt="Member 3">
+                </a>
+                <a href="https://www.wantedly.com/companies/senjinholdings/post_articles" target="_blank" class="member-card">
+                    <img src="../images/人4.png" alt="Member 4">
+                </a>
+                <a href="https://www.wantedly.com/companies/senjinholdings/post_articles" target="_blank" class="member-card">
+                    <img src="../images/人5.png" alt="Member 5">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Culture & Numbers -->
+    <section style="background:#000; padding:32px 16px 64px;">
+        <div style="max-width:1100px; margin:0 auto;">
+            <p style="text-align:center; font-size:18px; margin-bottom:40px; color:#ccc;">
+                仕事に没頭して勝ちを目指すチームとしての文化・制度をご紹介します。
+            </p>
+            <h2 style="font-weight:900; margin:0; font-size:clamp(18px,2.4vw,22px); letter-spacing:0.06em;">数字で見るSenjin</h2>
+            
+            <div style="display:grid; gap:16px; grid-template-columns:1fr 1fr; margin-top:20px;">
+                <!-- 社員数 -->
+                <div style="background:#0e0e0e; border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:18px; position:relative;">
+                    <h3 style="margin:0 0 10px; font-size:16px; font-weight:800;">社員数（役員・正社員）</h3>
+                    <div style="height:220px; position:relative;">
+                        <svg viewBox="0 0 100 60" style="width:100%; height:100%;">
+                            <g stroke="rgba(255,255,255,0.08)" stroke-width="0.3">
+                                <line x1="0" y1="55" x2="100" y2="55"/>
+                                <line x1="0" y1="41.25" x2="100" y2="41.25"/>
+                                <line x1="0" y1="27.5" x2="100" y2="27.5"/>
+                                <line x1="0" y1="13.75" x2="100" y2="13.75"/>
+                            </g>
+                            <polyline fill="rgba(77,208,255,0.15)" stroke="none" points="5,55 25,50 45,45 65,35 85,25 85,55 5,55"/>
+                            <polyline fill="none" stroke="#4dd0ff" stroke-width="1.6" points="5,50 25,45 45,40 65,30 85,20"/>
+                            <circle cx="5" cy="50" r="2" fill="#4dd0ff"/>
+                            <circle cx="25" cy="45" r="2" fill="#4dd0ff"/>
+                            <circle cx="45" cy="40" r="2" fill="#4dd0ff"/>
+                            <circle cx="65" cy="30" r="2" fill="#4dd0ff"/>
+                            <circle cx="85" cy="20" r="2" fill="#4dd0ff"/>
+                        </svg>
+                    </div>
+                    <div style="display:flex; justify-content:space-between; color:#bfbfbf; font-size:12px; margin-top:6px;">
+                        <span>2020</span><span>2021</span><span>2022</span><span>2023</span><span>2024</span>
+                    </div>
+                    <div style="color:#bfbfbf; font-size:12px; margin-top:8px;">※ 2020→2024：6人 → 38人</div>
+                </div>
+                
+                <!-- 男女比 -->
+                <div style="background:#0e0e0e; border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:18px;">
+                    <h3 style="margin:0 0 10px; font-size:16px; font-weight:800;">男女比率</h3>
+                    <div style="width:220px; height:220px; border-radius:50%; background:conic-gradient(#7cffb2 0 70%, #ff88cc 70% 100%); position:relative; margin:6px auto; display:grid; place-items:center;">
+                        <div style="position:absolute; inset:18%; border-radius:50%; background:#1a1a1a;"></div>
+                        <div style="position:absolute; text-align:center; font-weight:800; font-size:28px;">
+                            7 : 3<span style="display:block; font-size:12px; color:#bfbfbf; font-weight:600; margin-top:4px;">男性 : 女性</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 平均年齢 -->
+                <div style="background:#0e0e0e; border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:18px;">
+                    <h3 style="margin:0 0 10px; font-size:16px; font-weight:800;">平均年齢</h3>
+                    <div style="width:220px; height:220px; border-radius:50%; background:conic-gradient(#ffd54f 0 90%, #90caf9 90% 95%, #ce93d8 95% 100%); position:relative; margin:6px auto; display:grid; place-items:center;">
+                        <div style="position:absolute; inset:18%; border-radius:50%; background:#1a1a1a;"></div>
+                        <div style="position:absolute; text-align:center; font-weight:800; font-size:28px;">
+                            25.6<span style="display:block; font-size:12px; color:#bfbfbf; font-weight:600; margin-top:4px;">平均年齢（歳）</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 拠点数 -->
+                <div style="background:#0e0e0e; border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:18px;">
+                    <h3 style="margin:0 0 10px; font-size:16px; font-weight:800;">拠点数</h3>
+                    <div style="font-size:44px; font-weight:900; line-height:1; margin:6px 0 10px;">4 拠点</div>
+                    <ul style="margin:8px 0 0; padding:0; list-style:none; display:flex; gap:10px; flex-wrap:wrap;">
+                        <li style="background:#111; border:1px solid rgba(255,255,255,0.08); padding:6px 10px; border-radius:999px; font-size:12px;">東京</li>
+                        <li style="background:#111; border:1px solid rgba(255,255,255,0.08); padding:6px 10px; border-radius:999px; font-size:12px;">岩国</li>
+                        <li style="background:#111; border:1px solid rgba(255,255,255,0.08); padding:6px 10px; border-radius:999px; font-size:12px;">天草</li>
+                        <li style="background:#111; border:1px solid rgba(255,255,255,0.08); padding:6px 10px; border-radius:999px; font-size:12px;">福岡</li>
+                    </ul>
+                    <div style="color:#bfbfbf; font-size:12px; margin-top:8px;">主要拠点一覧</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: WELLNESS -->
+    <section style="background:#000; padding:clamp(24px,4vw,40px) 16px 72px;">
+        <div style="max-width:1100px; margin:0 auto; position:relative;">
+            <h1 style="margin:0; line-height:0.95; font-size:clamp(48px, 12vw, 120px); font-weight:900; letter-spacing:-0.02em;">WELLNESS</h1>
+            <p style="margin:0 0 4px; color:#ccc; font-size:13px; letter-spacing:0.1em;">福利厚生</p>
+            <hr style="border:0; border-top:1px solid rgba(255,255,255,0.15); margin:clamp(16px,2vw,24px) 0 8px;">
+            
+            <ul style="margin:8px 0 0; padding:0; list-style:none;">
+                <li style="display:grid; grid-template-columns:auto 1fr; gap:18px; padding:22px 4px; border-bottom:1px solid rgba(255,255,255,0.15); border-top:1px solid rgba(255,255,255,0.15);">
+                    <div style="width:40px; height:40px; border-radius:10px; background:rgba(255,255,255,0.08); display:grid; place-items:center;">
+                        <svg viewBox="0 0 24 24" style="width:22px; height:22px; fill:#fff;"><path d="M12 3 3 10v10h6v-5h6v5h6V10l-9-7Zm7 16h-3v-5H8v5H5v-8.2l7-5.4 7 5.4V19Z"/></svg>
+                    </div>
+                    <div>
+                        <h2 style="margin:2px 0 6px; font-size:clamp(16px, 2.6vw, 18px); font-weight:700;">寮制度</h2>
+                        <p style="margin:0; color:#ccc; font-size:clamp(14px, 2.2vw, 15.5px); line-height:1.95;">オフィス横のタワーマンションをシェアハウスとして用意しており、利用することが可能です。</p>
+                    </div>
+                </li>
+                
+                <li style="display:grid; grid-template-columns:auto 1fr; gap:18px; padding:22px 4px; border-bottom:1px solid rgba(255,255,255,0.15);">
+                    <div style="width:40px; height:40px; border-radius:10px; background:rgba(255,255,255,0.08); display:grid; place-items:center;">
+                        <svg viewBox="0 0 24 24" style="width:22px; height:22px; fill:#fff;"><path d="M3 11h18v2H3z"/><path d="M12 4a8 8 0 1 1 0 16 8 8 0 0 1 0-16Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Zm-2.5 3h5v1.5h-1.8v1h1.8V13h-1.8v2H11v-2H9.5V11h1.5v-1H9.5V9Z"/></svg>
+                    </div>
+                    <div>
+                        <h2 style="margin:2px 0 6px; font-size:clamp(16px, 2.6vw, 18px); font-weight:700;">家賃補助制度</h2>
+                        <p style="margin:0; color:#ccc; font-size:clamp(14px, 2.2vw, 15.5px); line-height:1.95;">仕事に集中するための支援として、徒歩圏内に住むメンバーには家賃補助5万円/月を給付しています。</p>
+                    </div>
+                </li>
+                
+                <li style="display:grid; grid-template-columns:auto 1fr; gap:18px; padding:22px 4px; border-bottom:1px solid rgba(255,255,255,0.15);">
+                    <div style="width:40px; height:40px; border-radius:10px; background:rgba(255,255,255,0.08); display:grid; place-items:center;">
+                        <svg viewBox="0 0 24 24" style="width:22px; height:22px; fill:#fff;"><path d="M16 11a3 3 0 1 0-2.999-3A3 3 0 0 0 16 11Zm-8 0a3 3 0 1 0-3-3 3 3 0 0 0 3 3Zm8 2c-2.21 0-4 1.79-4 4v2h8v-2c0-2.21-1.79-4-4-4ZM8 13c-2.21 0-4 1.79-4 4v2h6v-2c0-1.1.45-2.1 1.17-2.83A3.97 3.97 0 0 0 8 13Z"/></svg>
+                    </div>
+                    <div>
+                        <h2 style="margin:2px 0 6px; font-size:clamp(16px, 2.6vw, 18px); font-weight:700;">部活動</h2>
+                        <p style="margin:0; color:#ccc; font-size:clamp(14px, 2.2vw, 15.5px); line-height:1.95;">フットサル部やマラソン部、サウナ部など、有志メンバーで月に1.2回の活動を行っています。</p>
+                    </div>
+                </li>
+                
+                <li style="display:grid; grid-template-columns:auto 1fr; gap:18px; padding:22px 4px; border-bottom:1px solid rgba(255,255,255,0.15);">
+                    <div style="width:40px; height:40px; border-radius:10px; background:rgba(255,255,255,0.08); display:grid; place-items:center;">
+                        <svg viewBox="0 0 24 24" style="width:22px; height:22px; fill:#fff;"><path d="M7 2v9a2 2 0 0 1-2 2H4v9H2V2h2v7h1V2h2Zm9 0h2v8a2 2 0 0 1-2 2h-1v10h-2V2h3Zm-5 0h2v9h-2z"/></svg>
+                    </div>
+                    <div>
+                        <h2 style="margin:2px 0 6px; font-size:clamp(16px, 2.6vw, 18px); font-weight:700;">締め会制度</h2>
+                        <p style="margin:0; color:#ccc; font-size:clamp(14px, 2.2vw, 15.5px); line-height:1.95;">毎月末の決算報告会のあとに、社員全員でご飯を食べます。</p>
+                    </div>
+                </li>
+                
+                <li style="display:grid; grid-template-columns:auto 1fr; gap:18px; padding:22px 4px; border-bottom:1px solid rgba(255,255,255,0.15);">
+                    <div style="width:40px; height:40px; border-radius:10px; background:rgba(255,255,255,0.08); display:grid; place-items:center;">
+                        <svg viewBox="0 0 24 24" style="width:22px; height:22px; fill:#fff;"><path d="M4 3h11a3 3 0 0 1 3 3v13.5a2.5 2.5 0 0 0-2.5-2.5H4V3Zm0 15h11.5a1.5 1.5 0 0 1 1.5 1.5V6a2 2 0 0 0-2-2H5v14Z"/></svg>
+                    </div>
+                    <div>
+                        <h2 style="margin:2px 0 6px; font-size:clamp(16px, 2.6vw, 18px); font-weight:700;">自主練応援制度</h2>
+                        <p style="margin:0; color:#ccc; font-size:clamp(14px, 2.2vw, 15.5px); line-height:1.95;">書籍購入やセミナーの参加費用など、会社が全額負担。成長の為のサポートは惜しみません。</p>
+                    </div>
+                </li>
             </ul>
         </div>
-    </nav>
-
-    <!-- Recruit Message -->
-    <section class="recruit-message">
-        <div class="container">
-            <div class="message-content">
-                <p>Senjin Holdingsは若い才能が熱狂することで世界を変えていくと確信しています。</p>
-                <p>若手の熱量のすべてをSenjin Holdingsでの業務に捧げる覚悟のある人だけ、お待ちしています。</p>
-            </div>
-        </div>
     </section>
 
-    <!-- Culture & Values -->
-    <section class="culture-values">
+    <!-- Section 8: Positions -->
+    <section class="positions-section">
         <div class="container">
-            <h2 class="section-title">組織文化・バリュー</h2>
-            
-            <div class="values-grid">
-                <div class="value-card">
-                    <h3>🔥 クレド</h3>
-                    <ul>
-                        <li>同世代でNo.1が集まる組織</li>
-                        <li>業界No.1を取り続ける</li>
-                        <li>人の倍働いて3倍遊ぶ</li>
-                    </ul>
+            <h2 class="section-title" style="text-align: center;">募集職種</h2>
+            <div class="positions-list">
+                <div class="position-item">
+                    <p class="position-title">WEBマーケター</p>
+                    <i class="material-icons position-icon">add</i>
                 </div>
-                
-                <div class="value-card">
-                    <h3>🏃 採用基準</h3>
-                    <p class="emphasis">「学生時代の熱量以上で働きたい人」</p>
-                    <ul>
-                        <li>東大・早慶・体育会出身者多数</li>
-                        <li>トップアスリート・日本代表クラスも在籍</li>
-                        <li>圧倒的な実行力と成長意欲を重視</li>
-                        <li>ネットワーキング: 自治体・大手企業等との連携機会提供</li>
-                    </ul>
+                <div class="position-item">
+                    <p class="position-title">WEBエンジニア</p>
+                    <i class="material-icons position-icon">add</i>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Work Environment -->
-    <section class="work-environment">
-        <div class="container">
-            <h2 class="section-title">働く環境</h2>
-            <div class="environment-grid">
-                <div class="environment-item">
-                    <div class="icon">💰</div>
-                    <h3>成果に応じた評価制度</h3>
-                    <p>実力と成果を正当に評価し、報酬に反映</p>
+                <div class="position-item">
+                    <p class="position-title">グロースハッカー</p>
+                    <i class="material-icons position-icon">add</i>
                 </div>
-                <div class="environment-item">
-                    <div class="icon">📚</div>
-                    <h3>充実した研修制度</h3>
-                    <p>業界トップクラスの実践的スキルを習得</p>
+                <div class="position-item">
+                    <p class="position-title">営業職</p>
+                    <i class="material-icons position-icon">add</i>
                 </div>
-                <div class="environment-item">
-                    <div class="icon">🎉</div>
-                    <h3>社内イベント多数</h3>
-                    <p>仕事も遊びも全力で楽しむカルチャー</p>
+                <div class="position-item">
+                    <p class="position-title">ライティング編集者</p>
+                    <i class="material-icons position-icon">add</i>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Positions -->
-    <section class="positions">
-        <div class="container">
-            <h2 class="section-title">募集職種</h2>
-            
-            <div class="positions-grid">
-                <article class="position-card">
-                    <div class="position-icon">🎯</div>
-                    <h3>マーケター</h3>
-                    <p class="position-tagline">AIネイティブな次世代マーケティング</p>
-                    <div class="position-details">
-                        <h4>業務内容</h4>
-                        <ul>
-                            <li>AI×マーケティングの戦略立案・実行</li>
-                            <li>広告運用・効果測定・改善提案</li>
-                            <li>クライアント企業の成長支援</li>
-                        </ul>
-                        <h4>求める人材</h4>
-                        <ul>
-                            <li>マーケティングへの強い興味・情熱</li>
-                            <li>データ分析と創造性の両立</li>
-                            <li>新しいツール・技術への適応力</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <article class="position-card">
-                    <div class="position-icon">🤖</div>
-                    <h3>エンジニア</h3>
-                    <p class="position-tagline">最先端AI技術で世界を加速</p>
-                    <div class="position-details">
-                        <h4>業務内容</h4>
-                        <ul>
-                            <li>AI開発・機械学習モデルの構築</li>
-                            <li>マーケティング自動化ツールの開発</li>
-                            <li>SaaSプロダクトの設計・実装</li>
-                        </ul>
-                        <h4>求める人材</h4>
-                        <ul>
-                            <li>プログラミングスキル（Python、JavaScript等）</li>
-                            <li>AI・機械学習への強い関心</li>
-                            <li>プロダクト志向の開発姿勢</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <article class="position-card">
-                    <div class="position-icon">🎨</div>
-                    <h3>アーティスト</h3>
-                    <p class="position-tagline">組織と社会に新たな価値を創造</p>
-                    <div class="position-details">
-                        <h4>業務内容</h4>
-                        <ul>
-                            <li>企業の作家性抽出・ブランディング</li>
-                            <li>アート×経営ワークショップの企画・実施</li>
-                            <li>クリエイティブディレクション</li>
-                        </ul>
-                        <h4>求める人材</h4>
-                        <ul>
-                            <li>アート・デザインのバックグラウンド</li>
-                            <li>ビジネスへの興味・理解</li>
-                            <li>コンセプチュアルな思考力</li>
-                        </ul>
-                    </div>
-                </article>
-            </div>
-
-            <div class="view-more">
-                <a href="https://www.senjinholdings.co.jp/recruit" target="_blank" class="btn btn-primary">View More →</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Future Outlook -->
-    <section class="future-outlook">
-        <div class="container">
-            <h2 class="section-title">今後の展望</h2>
-            
-            <div class="outlook-content">
-                <div class="outlook-item">
-                    <h3>🏦 CVC + ファンド設立</h3>
-                    <p class="year">2025年内に本格始動予定</p>
-                    <ul>
-                        <li>営業体制とメニューが整ったタイミングでの戦略的展開</li>
-                        <li>メンバーのレベル向上に伴うネクストチャレンジの場として</li>
-                        <li>より大規模・インパクトのある投資案件への挑戦</li>
-                    </ul>
+                <div class="position-item">
+                    <p class="position-title">動画クリエイター</p>
+                    <i class="material-icons position-icon">add</i>
                 </div>
-                
-                <p class="outlook-message">
-                    「マーケティング×資本」の統合支援で、日本の成長企業を次のステージへ押し上げます。
-                </p>
+                <div class="position-item">
+                    <p class="position-title">WEBデザイナー</p>
+                    <i class="material-icons position-icon">add</i>
+                </div>
+                <div class="position-item">
+                    <p class="position-title">UI/UXデザイナー</p>
+                    <i class="material-icons position-icon">add</i>
+                </div>
+                <div class="position-item">
+                    <p class="position-title">管理部長</p>
+                    <i class="material-icons position-icon">add</i>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Entry Section -->
-    <section class="entry-section" id="entry-form">
+    <section class="entry-section" id="entry-form" style="padding: 80px 0; background: #111;">
         <div class="container">
-            <h2 class="section-title">エントリー</h2>
-            <div class="entry-content">
+            <h2 class="section-title" style="text-align: center;">エントリー</h2>
+            <div class="entry-content" style="text-align: center;">
                 <p>Senjin Holdingsで世界を加速させる仲間を募集しています。</p>
                 <p>熱量と実行力に自信がある方は、ぜひご応募ください。</p>
-                <div class="entry-buttons">
-                    <a href="https://www.senjinholdings.co.jp/recruit" target="_blank" class="btn btn-primary">正式エントリー</a>
+                <div class="entry-buttons" style="margin-top: 32px;">
+                    <a href="https://www.senjinholdings.co.jp/recruit" target="_blank" class="btn btn-primary" style="margin-right: 16px;">正式エントリー</a>
                     <a href="/contact/?type=recruit" class="btn btn-outline">カジュアル面談を申し込む</a>
                 </div>
             </div>

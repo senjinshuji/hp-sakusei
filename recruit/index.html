@@ -56,21 +56,34 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-            background-image: url('../images/recruit-bg2.png');
-            background-size: cover;
-            background-position: center;
+            background: #000;
+            padding: 80px 0;
+        }
+        
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 80px;
+        }
+        
+        .about-title-wrap {
+            flex: 0 0 auto;
         }
         
         .about-content {
+            flex: 1;
             max-width: 600px;
-            padding: 80px 40px;
         }
         
         .about-content h2 {
             font-size: clamp(32px, 5vw, 56px);
             font-weight: 900;
             margin-bottom: 32px;
-            line-height: 1.2;
+            line-height: 1.4;
         }
         
         .about-content p {
@@ -93,6 +106,17 @@
         .about-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 30px rgba(69, 238, 255, 0.3);
+        }
+        
+        @media (max-width: 960px) {
+            .about-container {
+                flex-direction: column;
+                gap: 40px;
+                text-align: center;
+            }
+            .about-title-wrap {
+                text-align: center;
+            }
         }
         
         /* Members Voice Section */
@@ -290,13 +314,17 @@
         </div>
     </section>
 
-    <!-- Section 2: About with Background -->
+    <!-- Section 2: About with Black Background -->
     <section class="about-section">
-        <div class="about-content">
-            <h2>異才の融合が、世界を加速させる</h2>
-            <p>私たちSenjin Holdingsは、マーケター、エンジニア、アーティスト、学者、起業家が一体となった唯一の会社群。</p>
-            <p>世界を最も加速させるために、最前線のAI技術で効率を極限まで高めながらAIにはないアーティスト性を戦略に組み込んだマーケティングで利益創出を伴走します。</p>
-            <a href="https://hp-sakusei.vercel.app/about/" class="about-btn">私たちについて</a>
+        <div class="about-container">
+            <div class="about-title-wrap">
+                <h2>異才の融合が<br>世界を加速させる</h2>
+            </div>
+            <div class="about-content">
+                <p>私たちSenjin Holdingsは、マーケター、エンジニア、アーティスト、学者、起業家が一体となった唯一の会社群。</p>
+                <p>世界を最も加速させるために、最前線のAI技術で効率を極限まで高めながらAIにはないアーティスト性を戦略に組み込んだマーケティングで利益創出を伴走します。</p>
+                <a href="https://hp-sakusei.vercel.app/about/" class="about-btn">私たちについて</a>
+            </div>
         </div>
     </section>
 
@@ -318,13 +346,13 @@
     </section>
 
     <!-- Section 4: CREDO -->
-    <section style="background:#000; padding:40px 20px;">
-        <div style="max-width:980px; margin:0 auto;">
-            <h1 style="font-size:clamp(32px, 6vw, 64px); font-weight:900; color:#fff; margin:0; line-height:1;">CREDO</h1>
-            <p style="font-size:clamp(12px, 1.6vw, 14px); letter-spacing:0.1em; font-weight:700; color:#ccc; margin:4px 0 48px;">私たちの行動指針</p>
+    <section style="background:#000; padding:40px 16px 72px;">
+        <div style="max-width:1100px; margin:0 auto;">
+            <h1 style="font-weight:900; font-size:clamp(48px, 12vw, 140px); line-height:1; letter-spacing:-0.02em; color:#fff; margin:0; padding-top:8px;">CREDO</h1>
+            <hr style="border:0; border-top:1px solid rgba(255,255,255,0.2); margin:clamp(16px,2vw,24px) 0 clamp(20px,4vw,48px);">
             
             <div style="display:flex; gap:24px; margin-bottom:56px; align-items:flex-start;">
-                <div style="font-size:clamp(60px, 8vw, 110px); font-weight:900; color:rgba(255, 255, 255, 0.12); line-height:1; flex-shrink:0; min-width:80px; text-align:right;">01</div>
+                <div style="font-size:clamp(60px, 8vw, 110px); font-weight:900; color:rgba(255, 255, 255, 0.12); line-height:1; flex-shrink:0; min-width:clamp(80px, 10vw, 140px); text-align:right;">01</div>
                 <div style="flex:1;">
                     <h2 style="font-size:clamp(24px, 3.6vw, 40px); font-weight:700; margin:0 0 12px; color:#fff; line-height:1.3;">No.1にこだわれ</h2>
                     <p style="font-size:16px; color:#ccc; margin:0;">やるからには1番を取り続けよう。1位じゃないと面白くない。</p>
@@ -332,7 +360,7 @@
             </div>
             
             <div style="display:flex; gap:24px; margin-bottom:56px; align-items:flex-start;">
-                <div style="font-size:clamp(60px, 8vw, 110px); font-weight:900; color:rgba(255, 255, 255, 0.12); line-height:1; flex-shrink:0; min-width:80px; text-align:right;">02</div>
+                <div style="font-size:clamp(60px, 8vw, 110px); font-weight:900; color:rgba(255, 255, 255, 0.12); line-height:1; flex-shrink:0; min-width:clamp(80px, 10vw, 140px); text-align:right;">02</div>
                 <div style="flex:1;">
                     <h2 style="font-size:clamp(24px, 3.6vw, 40px); font-weight:700; margin:0 0 12px; color:#fff; line-height:1.3;">Output is everything</h2>
                     <p style="font-size:16px; color:#ccc; margin:0;">生み出した成果にこそ価値がある。</p>
@@ -340,7 +368,7 @@
             </div>
             
             <div style="display:flex; gap:24px; margin-bottom:56px; align-items:flex-start;">
-                <div style="font-size:clamp(60px, 8vw, 110px); font-weight:900; color:rgba(255, 255, 255, 0.12); line-height:1; flex-shrink:0; min-width:80px; text-align:right;">03</div>
+                <div style="font-size:clamp(60px, 8vw, 110px); font-weight:900; color:rgba(255, 255, 255, 0.12); line-height:1; flex-shrink:0; min-width:clamp(80px, 10vw, 140px); text-align:right;">03</div>
                 <div style="flex:1;">
                     <h2 style="font-size:clamp(24px, 3.6vw, 40px); font-weight:700; margin:0 0 12px; color:#fff; line-height:1.3;">キャパってる？w</h2>
                     <p style="font-size:16px; color:#ccc; margin:0;">発狂するくらい忙しい時が一番成長してる。</p>
@@ -348,7 +376,7 @@
             </div>
             
             <div style="display:flex; gap:24px; margin-bottom:56px; align-items:flex-start;">
-                <div style="font-size:clamp(60px, 8vw, 110px); font-weight:900; color:rgba(255, 255, 255, 0.12); line-height:1; flex-shrink:0; min-width:80px; text-align:right;">04</div>
+                <div style="font-size:clamp(60px, 8vw, 110px); font-weight:900; color:rgba(255, 255, 255, 0.12); line-height:1; flex-shrink:0; min-width:clamp(80px, 10vw, 140px); text-align:right;">04</div>
                 <div style="flex:1;">
                     <h2 style="font-size:clamp(24px, 3.6vw, 40px); font-weight:700; margin:0 0 12px; color:#fff; line-height:1.3;">どうやったら出来る？</h2>
                     <p style="font-size:16px; color:#ccc; margin:0;">できない理由を語る前にできる方法を考える。</p>
@@ -359,10 +387,10 @@
 
     <!-- Section 5: Members Voice -->
     <section class="members-section">
-        <div class="container">
-            <h2>MEMBER</h2>
-            <p class="members-subtitle">私たちは、メンバー全員が「人生の瞬間最大風速」を更新し続ける組織、です。</p>
-            <p class="members-description">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 40px;">
+            <h2 style="text-align: left;">MEMBER</h2>
+            <p class="members-subtitle" style="text-align: left;">私たちは、メンバー全員が「人生の瞬間最大風速」を更新し続ける組織、です。</p>
+            <p class="members-description" style="text-align: left; margin: 0 0 48px;">
                 国内最大級の参加者を誇るビジネスコンテストでの優勝、<br>
                 投資コンテストでトップの運用益を記録した学生、<br>
                 国内最大エントリー数のインターンシップでの最優秀賞受賞者、<br>
@@ -389,11 +417,38 @@
         </div>
     </section>
 
-    <!-- Section 6: Culture & Numbers -->
+    <!-- Section 6: Environment -->
+    <section style="background:#000; padding:clamp(40px,6vw,80px) 16px;">
+        <div style="max-width:1100px; margin:0 auto;">
+            <h1 style="font-weight:900; font-size:clamp(48px, 12vw, 140px); line-height:1; letter-spacing:-0.02em; color:#fff; margin:0; padding-top:8px; text-align:center;">Environment 働く環境</h1>
+            <hr style="border:0; border-top:1px solid rgba(255,255,255,0.2); margin:clamp(16px,2vw,24px) 0 clamp(32px,4vw,56px);">
+            
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:40px; margin-bottom:56px;">
+                <div style="background:rgba(255,255,255,0.05); border-radius:12px; padding:32px;">
+                    <h3 style="font-size:24px; font-weight:700; margin:0 0 16px; color:#45EEFF;">フレックス制度</h3>
+                    <p style="color:#ccc; line-height:1.8; margin:0;">社員一人ひとりのライフスタイルに合わせた柔軟な勤務時間を選択可能。朝型・夜型問わず、最も生産性の高い時間帯で働けます。</p>
+                </div>
+                <div style="background:rgba(255,255,255,0.05); border-radius:12px; padding:32px;">
+                    <h3 style="font-size:24px; font-weight:700; margin:0 0 16px; color:#45EEFF;">リモートワーク</h3>
+                    <p style="color:#ccc; line-height:1.8; margin:0;">週2-3日のリモートワークを推奨。場所に縛られない働き方で、通勤時間を削減し、より創造的な活動に時間を使えます。</p>
+                </div>
+                <div style="background:rgba(255,255,255,0.05); border-radius:12px; padding:32px;">
+                    <h3 style="font-size:24px; font-weight:700; margin:0 0 16px; color:#45EEFF;">成長環境</h3>
+                    <p style="color:#ccc; line-height:1.8; margin:0;">メンター制度、定期的な1on1、社内勉強会など、個人の成長を最大化する環境を整備。挑戦を歓迎する文化があります。</p>
+                </div>
+                <div style="background:rgba(255,255,255,0.05); border-radius:12px; padding:32px;">
+                    <h3 style="font-size:24px; font-weight:700; margin:0 0 16px; color:#45EEFF;">最新設備</h3>
+                    <p style="color:#ccc; line-height:1.8; margin:0;">高スペックPC、デュアルモニター、人間工学に基づいた椅子など、生産性を最大化する設備を完備しています。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Culture & Numbers -->
     <section style="background:#000; padding:32px 16px 64px;">
         <div style="max-width:1100px; margin:0 auto;">
             <p style="text-align:center; font-size:18px; margin-bottom:40px; color:#ccc;">
-                仕事に没頭して勝ちを目指すチームとしての文化・制度をご紹介します。
+                仕事に没頭して、価値を出すチームとしての文化・制度をご紹介します。
             </p>
             <h2 style="font-weight:900; margin:0; font-size:clamp(18px,2.4vw,22px); letter-spacing:0.06em;">数字で見るSenjin</h2>
             
@@ -523,10 +578,10 @@
         </div>
     </section>
 
-    <!-- Section 8: Positions -->
+    <!-- Section 9: Positions -->
     <section class="positions-section">
         <div class="container">
-            <h2 class="section-title" style="text-align: center;">募集職種</h2>
+            <h2 class="section-title" style="text-align: center; font-size: clamp(32px, 5vw, 48px); font-weight: 900;">POSITION 募集職種</h2>
             <div class="positions-list">
                 <div class="position-item">
                     <p class="position-title">WEBマーケター</p>
@@ -575,9 +630,8 @@
             <div class="entry-content" style="text-align: center;">
                 <p style="color: #fff; font-size: 18px; font-weight: 500;">Senjin Holdingsで世界を加速させる仲間を募集しています。</p>
                 <p style="color: #fff; font-size: 18px; font-weight: 500;">熱量と実行力に自信がある方は、ぜひご応募ください。</p>
-                <div class="entry-buttons" style="margin-top: 32px;">
-                    <a href="https://www.senjinholdings.co.jp/recruit" target="_blank" class="btn btn-primary" style="margin-right: 16px;">正式エントリー</a>
-                    <a href="/contact/?type=recruit" class="btn btn-outline">カジュアル面談を申し込む</a>
+                <div class="entry-buttons" style="margin-top: 48px;">
+                    <a href="/contact/?type=recruit" style="display: inline-block; padding: 20px 48px; background: #45EEFF; color: #000; font-size: 20px; font-weight: 700; text-decoration: none; border-radius: 8px; transition: all 0.3s; box-shadow: 0 4px 20px rgba(69, 238, 255, 0.3);" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 30px rgba(69, 238, 255, 0.5)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(69, 238, 255, 0.3)';">カジュアル面談を申し込む</a>
                 </div>
             </div>
         </div>
